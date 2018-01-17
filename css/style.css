@@ -57,11 +57,6 @@ body {
 
 }
 
-.wrapper {
-    height: 100%;
-
-}
-
 ul {
     padding: 0;
     margin: 0;
@@ -80,8 +75,19 @@ a {
     text-decoration: none;
 }
 
-.first-bg {
+.site {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+/* ПРИВЕТСТВИЕ */
+.first-bg {
+    min-height: 100%;
     top: 0;
     bottom: 0;
     right: 0;
@@ -98,14 +104,13 @@ a {
 }
 
 .container_fp {
-
     height: 100%;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
     flex-direction: column;
-
     align-content: stretch;
+
 
 }
 
@@ -265,4 +270,96 @@ a {
 .scroll__img {
     width: 29px;
     height: 14px;
+}
+
+/* МЫ ЛУЧШИЕ */
+
+.we {
+    min-height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/bg-we.png") no-repeat center center fixed #000000;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.we__best {
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.we__text {
+    color: #2f3234;
+    font-family: 'Gagalin', Helvetica, sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 64px;
+}
+
+.meat, .hand, .natural {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 295px;
+}
+
+.we__rules {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%;
+    min-height: 260px;
+}
+
+.meat__img, .hand__img, .natural__img {
+
+}
+
+.meat__header, .hand__header, .natural__header {
+
+    color: #2f3234;
+    font-family: Lifehack, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.6px;
+    text-align: center;
+}
+
+.meat__text, .hand__text, .natural__text {
+    opacity: 0.8;
+    color: #2f3234;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+}
+
+/*ОТЗЫВЫ*/
+.review {
+    min-height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    /*background: url("../img/bg-we.png") no-repeat center center fixed #000000;*/
+    background-size: cover;
+    background-color: #5f9ea0;
+    color: #ffffff;
 }
