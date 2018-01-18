@@ -111,7 +111,6 @@ a {
     flex-direction: column;
     align-content: stretch;
 
-
 }
 
 /* HEADER */
@@ -276,12 +275,12 @@ a {
 
 .we {
     min-height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -302,6 +301,7 @@ a {
     font-size: 72px;
     font-weight: 400;
     line-height: 64px;
+    text-transform: uppercase;
 }
 
 .meat, .hand, .natural {
@@ -348,18 +348,71 @@ a {
 /*ОТЗЫВЫ*/
 .review {
     min-height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     /*background: url("../img/bg-we.png") no-repeat center center fixed #000000;*/
     background-size: cover;
-    background-color: #5f9ea0;
+    background-color: #cfd8dc;
     color: #ffffff;
+    border: 2px solid red;
 }
+
+.review__line1 {
+    border: 2px solid #ff9917;
+    display: flex;
+    /*flex-wrap: nowrap;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    /*align-items: stretch;*/
+}
+
+.review__line2 {
+    border: 2px solid #00ff95;
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: stretch;*/
+
+}
+
+.client1, .client2, .client3, .client4, .client5, .client6, .client7, .client8 {
+    border: 2px solid #ffff00;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.client1__text, .client2__text, .client3__text, .client4__text, .client5__text, .client6__text, .client7__text, .client8__text {
+    border: 2px solid #6befff;
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    width: 80%;
+}
+
+/*.client1 {*/
+/*background: url("../img/photo-1.png") no-repeat center center fixed;*/
+/*background-size: cover;*/
+/*height: 325px;*/
+/*}*/
+
+.client1_header, .client2_header, .client3_header, .client4_header, .client5_header, .client6_header, .client7_header, .client8_header {
+    color: #ffffff;
+    font-family: Gagalin, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28.11px;
+    letter-spacing: .1em;
+}
+
