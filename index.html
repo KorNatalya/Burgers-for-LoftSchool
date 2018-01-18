@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/normalize.css"/>
@@ -15,245 +15,310 @@
 <![endif]-->
 
 <div class="wrapper">
-    <div class="site">
-        <div id="first-bg" class="first-bg">
-            <div class="container_fp">
-
-                <header class="header">
+    <section class="maincontent">
+        <section class="section welcome">
+            <div class="container">
+                <header class="welcome__header">
                     <div class="header__logo">
-                        <a href="/"><img src="img/logo.svg" alt="Mr. Burger" class="logo__pic"></a>
+                        <a href="/" class="logo">
+                            <img src="img/logo.svg" alt="Mr. Burger" class="logo__img">
+                        </a>
                     </div>
                     <div class="header__menu">
                         <ul class="menu">
-                            <li class="menu__item menu__item_no-dot">
+                            <li class="menu__item">
                                 <a href="#" class="menu__link">
-                                    <span class="menu__link-text">О НАС</span>
+                                    О нас
                                 </a>
                             </li>
                             <li class="menu__item">
-
                                 <a href="#" class="menu__link">
-                                    <span class="menu__link-text">БУРГЕРЫ</span>
+                                    Бургеры
                                 </a>
                             </li>
                             <li class="menu__item">
-
-                                <a href="#" class="menu__link">
-                                    <span class="menu__link-text">КОМАНДА</span>
-                                </a>
+                                <a href="#" class="menu__link">Команда</a>
                             </li>
                             <li class="menu__item">
-
-                                <a href="#" class="menu__link">
-                                    <span class="menu__link-text">МЕНЮ</span>
-                                </a>
+                                <a href="#" class="menu__link">Меню</a>
                             </li>
                             <li class="menu__item">
-
-                                <a href="#" class="menu__link">
-                                    <span class="menu__link-text">ОТЗЫВЫ</span>
-                                </a>
+                                <a href="#" class="menu__link">Отзывы</a>
                             </li>
                             <li class="menu__item">
-
-                                <a href="#" class="menu__link">
-                                    <span class="menu__link-text">КОНТАКТЫ</span>
-                                </a>
-                            </li>
-                            <li class="menu__order">
-                                <a href="#" class="menu__link menu__link_painted">
-                                    <span class="menu__link-text">ЗАКАЗАТЬ</span>
-                                </a>
+                                <a href="#" class="menu__link">Контакты</a>
                             </li>
                         </ul>
+                        <button class="button button__action_order" value="Order">Заказать</button>
                     </div>
-
                 </header>
 
-
                 <!-- ГЛАВНОЕ -->
-                <div class="main">
-                    <div class="main__img">
-                        <img src="img/burger.png" alt="Бургер" class="main__img_burger">
+                <div class="welcome__content">
+                    <div class="welcome-content">
+                        <div class="content__left">
+                            <div class="left__pic">
+                                <img src="img/burger.png" alt="Бургер" class="left__img">
+                            </div>
+                        </div>
+                        <div class="content__right">
+                            <div class="right__text">
+                                <span class="right__title">Мы делаем</span>
+                                <span class="right__description">натуральные бургеры</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="main__text">
-                        <span class="main__text_first">МЫ ДЕЛАЕМ</span>
-                        <span class="main__text_second">натуральные бургеры</span>
-                    </div>
-
                 </div>
-
-
             </div>
-            <!-- FOOTER-->
-            <footer class="footer">
-                <div class="footer__scroll">
-                    <a href="#we">
+            <!-- ARROW -->
+            <div class="arrow">
+                <div class="arrow__scroll">
+                    <a href="#">
                         <img src="img/scroll.svg" alt="Стрелка" class="scroll__img">
                     </a>
                 </div>
-            </footer>
-
-        </div>
-        <!--НАВИГАЦИЯ -->
-        <div class="fixed_nav">
-            <div class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#first-bg" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#we" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#review" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
-                            <img src="./img/ellipse.svg" alt="Точка">
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </div>
+
+        </section>
+        <!--НАВИГАЦИЯ -->
+        <!--<div class="fixed_nav">-->
+        <!--<div class="nav">-->
+        <!--<ul class="nav__list">-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#first-bg" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#we" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#review" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="nav__item">-->
+        <!--<a href="#" class="nav__link">-->
+        <!--<img src="./img/ellipse.svg" alt="Точка">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
 
         <!-- МЫ ЛУЧШИЕ -->
-        <div id="we" class="we">
-            <div class="we__best">
-                <span class="we__text">Мы лучшие</span>
-            </div>
-            <div class="we__rules">
-                <div class="meat">
-                    <div class="meat__img">
-                        <img src="./img/meat.png" alt="Свежее мясо">
+        <section class="section best">
+            <div class="container">
+                <div class="best__content">
+                    <div class="we__best">
+                        <span class="we__text">Мы лучшие</span>
                     </div>
-                    <span class="meat__header">100% свежее мясо</span>
-                    <span class="meat__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</span>
-                </div>
+                    <div class="we__rules">
+                        <div class="meat">
+                            <div class="meat__img">
+                                <img src="./img/meat.png" alt="Свежее мясо">
+                            </div>
+                            <span class="meat__header">100% свежее мясо</span>
+                            <span class="meat__text">
+                        Драма представляет собой деструктивный цикл. Анапест представляет собой
+                        анапест.
+                        Ямб неравномерен.
+                    </span>
+                        </div>
 
-                <div class="hand">
-                    <div class="hand__img">
-                        <img src="./img/hand.png" alt="Ручная сборка">
-                    </div>
-                    <span class="hand__header">Ручная  сборка</span>
-                    <span class="hand__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</span>
-                </div>
+                        <div class="hand">
+                            <div class="hand__img">
+                                <img src="./img/hand.png" alt="Ручная сборка">
+                            </div>
+                            <span class="hand__header">Ручная  сборка</span>
+                            <span class="hand__text">
+                        Драма представляет собой деструктивный цикл. Анапест представляет
+                        собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                    </span>
+                        </div>
 
-                <div class="natural">
-                    <div class="natural__img">
-                        <img src="./img/natural.png" alt="Натуральные ингредиенты">
+                        <div class="natural">
+                            <div class="natural__img">
+                                <img src="./img/natural.png" alt="Натуральные ингредиенты">
+                            </div>
+                            <span class="natural__header">Натуральные ингредиенты</span>
+                            <span class="natural__text">
+                        Драма представляет собой деструктивный цикл.
+                        Анапест представляет собой анапест.
+                    </span>
+                        </div>
                     </div>
-                    <span class="natural__header">Натуральные ингредиенты</span>
-                    <span class="natural__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</span>
                 </div>
             </div>
-        </div>
+        </section>
+
         <!--ОТЗЫВЫ-->
-        <div id="review" class="review">
-            <div class="review__line1">
-                <div class="client1">
-                    <h2 class="client1_header">
-                        Екатерина
-                    </h2>
-                    <span class="client1__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client1__button">
-                </div>
-                <div class="client2">
-                    <h2 class="client2_header">
-                        Константин
-                    </h2>
-                    <span class="client2__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client2__button">
-                </div>
-                <div class="client3">
-                    <h2 class="client3_header">
-                        Анна
-                    </h2>
-                    <span class="client3__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client3__button">
-                </div>
-                <div class="client4">
-                    <h2 class="client4_header">
-                        Егор
-                    </h2>
-                    <span class="client4__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client4__button">
-                </div>
-            </div>
-            <div class="review__line2">
-                <div class="client5">
-                    <h2 class="client5_header">
-                        Андрей
-                    </h2>
-                    <span class="client5__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client5__button">
-                </div>
-                <div class="client6">
-                    <h2 class="client6_header">
-                        Мария
-                    </h2>
-                    <span class="client6__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client6__button">
-                </div>
-                <div class="client7">
-                    <h2 class="client7_header">
-                        Александр
-                    </h2>
-                    <span class="client7__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client7__button">
-                </div>
-                <div class="client8">
-                    <h2 class="client8_header">
-                        Владимир
-                    </h2>
-                    <span class="client8__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                    </span>
-                    <input type="button" value="ПОДРОБНЕЕ" class="client8__button">
-                </div>
-            </div>
-        </div>
-    </div>
+        <!--<section class="section review">-->
+            <!--<div class="review__line1">-->
+                <!--<div class="client1">-->
+                    <!--<style type="text/css">-->
+                        <!--.client1 {-->
+                            <!--background: url("./img/photo-1.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client1_header">-->
+                        <!--Екатерина-->
+                    <!--</h2>-->
+                    <!--<span class="client1__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+                <!--<div class="client2">-->
+                    <!--<style type="text/css">-->
+                        <!--.client2 {-->
+                            <!--background: url("./img/photo-2.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client2_header">-->
+                        <!--Константин-->
+                    <!--</h2>-->
+                    <!--<span class="client2__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+                <!--<div class="client3">-->
+                    <!--<style type="text/css">-->
+                        <!--.client3 {-->
+                            <!--background: url("./img/photo-3.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client3_header">-->
+                        <!--Анна-->
+                    <!--</h2>-->
+                    <!--<span class="client3__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+                <!--<div class="client4">-->
+                    <!--<style type="text/css">-->
+                        <!--.client4 {-->
+                            <!--background: url("./img/photo-4.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client4_header">-->
+                        <!--Егор-->
+                    <!--</h2>-->
+                    <!--<span class="client4__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="review__line2">-->
+                <!--<div class="client5">-->
+                    <!--<style type="text/css">-->
+                        <!--.client5 {-->
+                            <!--background: url("./img/photo-5.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client5_header">-->
+                        <!--Андрей-->
+                    <!--</h2>-->
+                    <!--<span class="client5__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+                <!--<div class="client6">-->
+                    <!--<style type="text/css">-->
+                        <!--.client6 {-->
+                            <!--background: url("./img/photo-6.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client6_header">-->
+                        <!--Мария-->
+                    <!--</h2>-->
+                    <!--<span class="client6__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+                <!--<div class="client7">-->
+                    <!--<style type="text/css">-->
+                        <!--.client7 {-->
+                            <!--background: url("./img/photo-7.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client7_header">-->
+                        <!--Александр-->
+                    <!--</h2>-->
+                    <!--<span class="client7__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,-->
+                        <!--а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+                <!--<div class="client8">-->
+                    <!--<style type="text/css">-->
+                        <!--.client8 {-->
+                            <!--background: url("./img/photo-8.jpg") center center no-repeat;-->
+                            <!--background-size: cover;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<h2 class="client8_header">-->
+                        <!--Владимир-->
+                    <!--</h2>-->
+                    <!--<span class="client8__text">-->
+                        <!--Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...-->
+                        <!--Никогда не думал, что булочки могут быть такими мягкими,-->
+                        <!--котлетка такой сочной, а сыр таким расплавленным.-->
+                    <!--</span>-->
+                    <!--<button value="More" class="button client1__button">Подробнее</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
+    </section>
 </div>
+<!--</div>-->
 </body>
 </html>
