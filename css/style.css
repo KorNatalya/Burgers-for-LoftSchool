@@ -57,11 +57,6 @@ body {
 
 }
 
-ul {
-    padding: 0;
-    margin: 0;
-}
-
 ul li {
     list-style: none;
 }
@@ -81,40 +76,31 @@ a {
 
 .maincontent {
     height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .section {
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* ПРИВЕТСТВИЕ */
 .welcome {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: url("../img/bg-texture.png") no-repeat center center fixed #000000;
     background-size: cover;
 }
 
 .container {
-    height: 100%;
     width: 940px;
     display: flex;
     position: relative;
     flex-direction: column;
-    /*border: 2px solid #fc5900;*/
 }
 
 /* HEADER */
 .welcome__header {
-
     display: flex;
     justify-content: space-between;
-    width: 940px;
-    height: 85px;
     align-items: center;
     margin-top: 10px;
 }
@@ -184,56 +170,58 @@ li.menu__item:first-child {
 
 .welcome-content {
     display: flex;
+    align-items: center;
 }
 
-.content__left {
+.welcome-content__burger {
     width: 50%;
-    min-height: 100%;
 }
 
-.content__right {
+.welcome-content__inscription {
     width: 50%;
-    min-height: 100%;
 }
 
-.left__pic {
+.burger__img {
     max-width: 100%;
     max-height: 100%;
 }
 
 .right__text {
-    width: 415px;
-    height: 444px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 20px;
 }
 
-.right__title {
-    color: #f9b43b;
+/*Заголовок*/
+.section__title {
     font-family: Gagalin, Helvetica, sans-serif;
-    font-size: 72px;
     font-weight: 400;
     line-height: 85px;
     text-transform: uppercase;
-    width: 415px;
-    height: 64px;
 }
 
-.right__description {
+.section__orange-title {
+    color: #f9b43b;
+    width: 415px;
+    height: 64px;
+    font-size: 72px;
+    margin-bottom: 30px;
+}
+
+/*КУРСИВ*/
+.section__lettering {
+    font-family: Lifehack, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.section__white-lettering {
     width: 415px;
     height: 166px;
     color: #ffffff;
-    font-family: Lifehack, Helvetica, sans-serif;
     font-size: 65px;
-    font-weight: 500;
     letter-spacing: -1.63px;
     line-height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
 
 /*БОКОВАЯ ПАНЕЛЬ*/
@@ -264,11 +252,12 @@ li.menu__item:first-child {
 
 /* ARROW */
 .arrow {
-position: absolute;
+    position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translate(-50%);
 }
+
 .arrow__scroll {
     width: 29px;
     height: 14px;
@@ -281,32 +270,30 @@ position: absolute;
 
 /* МЫ ЛУЧШИЕ */
 
-.best {
+.advantages {
     min-height: 100%;
-    display: flex;
-    justify-content: center;
     background: url("../img/bg-we.png") no-repeat center center fixed #000000;
     background-size: cover;
 }
 
-.best__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.advantages__content {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.we__best {
+.advantages .container {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages__header {
     height: 100px;
     margin-bottom: 20px;
 }
 
-.we__text {
+.title__text {
     color: #2f3234;
     font-family: 'Gagalin', Helvetica, sans-serif;
     font-size: 72px;
@@ -315,7 +302,7 @@ position: absolute;
     text-transform: uppercase;
 }
 
-.meat, .hand, .natural {
+.advantage__item {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -323,28 +310,26 @@ position: absolute;
     width: 290px;
 }
 
-.we__rules {
+.advantages__list {
     display: flex;
     justify-content: space-between;
     width: 100%;
     min-height: 260px;
 }
 
-.meat__img, .hand__img, .natural__img {
+.advantage__img {
 
 }
 
-.meat__header, .hand__header, .natural__header {
+.advantage__title {
     color: #2f3234;
-    font-family: Lifehack, Helvetica, sans-serif;
     font-size: 24px;
-    font-weight: 500;
     line-height: 28px;
     letter-spacing: -0.6px;
     text-align: center;
 }
 
-.meat__text, .hand__text, .natural__text {
+.advantage__text {
     opacity: 0.8;
     color: #2f3234;
     font-family: Ubuntu, Helvetica, sans-serif;
@@ -355,60 +340,79 @@ position: absolute;
 }
 
 /*ОТЗЫВЫ*/
-.review {
+.reviews {
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
     background-color: #cfd8dc;
 }
 
-.review__line1 {
-    min-height: 50%;
-    min-width: 100%;
-    display: flex;
+.reviews__list {
+    height: 100%;
+    list-style: none;
 }
 
-.review__line2 {
-    display: flex;
-    min-height: 50%;
-    min-width: 100%;
+.reviews__item {
+    float: left;
+    width: 25%;
+    height: 50%;
+    overflow: hidden;
 }
 
-.client1, .client2, .client3, .client4, .client5, .client6, .client7, .client8 {
+.review {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.review__picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: no-repeat 50%;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.review__hover {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    background: rgba(28, 28, 28, 0.77);
+    width: 100%;
+    height: 100%;
+    position: relative;
     display: flex;
+    align-content: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding: 10px;
 }
 
+.review:hover .review__hover {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
 
-
-/*.client1 {*/
-/*background: url("../img/photo-1.png") no-repeat center center fixed;*/
-/*background-size: cover;*/
-/*height: 325px;*/
-/*}*/
-
-.client1_header, .client2_header, .client3_header, .client4_header, .client5_header, .client6_header, .client7_header, .client8_header {
+.review_name {
     color: #ffffff;
     font-family: Gagalin, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 28.11px;
+    line-height: 28px;
     letter-spacing: .1em;
-    margin-bottom: 10px;
+    margin-left: 7%;
 }
-.client1__text, .client2__text, .client3__text, .client4__text, .client5__text, .client6__text, .client7__text, .client8__text {
+
+.review__text {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin: 2% 7% 0 7%;
 }
-.client1__button {
-    color: #ffffff;
+
+.review__button {
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 500;
@@ -416,5 +420,6 @@ position: absolute;
     width: 110px;
     height: 35px;
     background-color: #2f3234;
+    margin: 2% 7% 0 7%;
 }
 
