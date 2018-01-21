@@ -2,10 +2,14 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/normalize.css"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="icon" href="./icons/favicon.svg" sizes="any" type="image/svg+xml">
     <title>Mr. Burger</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!--<meta content="width=device-width, initial-scale=1" name="viewport">-->
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="icon" href="./icons/favicon.svg" sizes="any" type="image/svg+xml">
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -21,41 +25,44 @@
             <div class="container">
                 <!--HEADER-->
                 <header class="welcome__header">
-                    <div class="header__logo">
+                    <div class="company-logotype">
                         <a href="/" class="logo">
-                            <img src="icons/logo.svg" alt="Mr. Burger" class="logo__img">
+                            <img src="icons/logo.svg" alt="logo" class="logo__img">
                         </a>
                     </div>
-                    <div class="header__menu">
-                        <ul class="menu">
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">О нас</a>
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">О нас</a>
                             </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Бургеры</a>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Бургеры</a>
                             </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Команда</a>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Команда</a>
                             </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Меню</a>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Меню</a>
                             </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Отзывы</a>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Отзывы</a>
                             </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Контакты</a>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">Контакты</a>
                             </li>
                         </ul>
-                        <button class="button button_action_order" value="Order">Заказать</button>
-                    </div>
+
+                        <div class="header__btn">
+                            <button class="button button_action_order" value="Order">Заказать</button>
+                        </div>
+                    </nav>
                 </header>
 
                 <!-- ГЛАВНОЕ -->
                 <div class="welcome__content">
                     <div class="welcome-content">
                         <div class="welcome-content__burger">
-                            <img src="img/burger.png" alt="Бургер" class="burger__img">
+                            <img src="img/content/burger.png" alt="Бургер" class="burger__img">
                         </div>
                         <div class="welcome-content__inscription">
                             <span class="section__title section__title--orange">Мы делаем</span>
@@ -71,57 +78,10 @@
                         </a>
                     </div>
                 </div>
-
             </div>
 
         </section>
-        <!--НАВИГАЦИЯ -->
-        <!--<div class="fixed_nav">-->
-        <!--<div class="nav">-->
-        <!--<ul class="nav__list">-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#first-bg" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#we" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#review" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav__item">-->
-        <!--<a href="#" class="nav__link">-->
-        <!--<img src="./img/ellipse.svg" alt="Точка">-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</div>-->
-        <!--</div>-->
+
 
         <!-- МЫ ЛУЧШИЕ -->
         <section class="section advantages">
@@ -171,9 +131,9 @@
             <ul class="reviews__list">
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-1.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-1.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Екатерина</div>
+                            <div class="review_name">Екатерина Кларк</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -181,9 +141,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-2.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-2.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Алексей</div>
+                            <div class="review_name">Константин Спилберг</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -191,9 +151,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-3.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-3.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Анна</div>
+                            <div class="review_name">Анна Миллер</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -201,9 +161,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-4.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-4.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Егор</div>
+                            <div class="review_name">Егор Фостер</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -211,9 +171,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-5.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-5.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Андрей</div>
+                            <div class="review_name">Андрей Харрис</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -221,9 +181,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-6.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-6.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Мария</div>
+                            <div class="review_name">Мария Батлер</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -231,9 +191,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-7.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-7.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Александр</div>
+                            <div class="review_name">Александр Мур</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -241,9 +201,9 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__picture" style="background-image: url('./img/photo-8.jpg');"></div>
+                        <div class="review__picture" style="background-image: url('./img/photos/photo-8.jpg');"></div>
                         <div class="review__hover">
-                            <div class="review_name">Владимир</div>
+                            <div class="review_name">Владимир Коллинс</div>
                             <span class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</span>
                             <button value="More" class="button button_color_black">Подробнее</button>
                         </div>
@@ -253,6 +213,40 @@
         </section>
     </div>
 </div>
+
+<!--НАВИГАЦИЯ -->
+<!--<div class="sidebar">-->
+<!--<div class="fixed_nav">-->
+<!--<div class="nav">-->
+<!--<ul class="nav__list">-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--<li class="nav__item">-->
+<!--<a href="#" class="nav__link"></a>-->
+<!--</li>-->
+<!--</ul>-->
 <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
 </body>
 </html>

@@ -1,0 +1,76 @@
+/*ОТЗЫВЫ*/
+.reviews {
+  background-color: #cfd8dc;
+
+  &__list {
+    min-height: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 25%;
+    height: 50%;
+    overflow: hidden;
+  }
+}
+
+.review {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: no-repeat 50%;
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+
+  &__hover {
+    opacity: 0;
+    transition: all .6s ease-in-out;
+    background: rgba(28, 28, 28, 0.77);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  &_name {
+    color: #ffffff;
+    font-family: Gagalin, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .1em;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+}
+
+.review:hover .review__hover {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
+
