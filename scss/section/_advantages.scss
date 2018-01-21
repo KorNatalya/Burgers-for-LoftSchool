@@ -38,7 +38,7 @@
 
   &__title {
     font-family: Lifehack, Helvetica, sans-serif;
-    color: #2f3234;
+    color: $black;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -0.6px;
@@ -49,7 +49,7 @@
 
 .advantage__text {
   opacity: 0.8;
-  color: #2f3234;
+  color: $black;
   font-family: Ubuntu, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;

@@ -46,21 +46,21 @@
     box-sizing: border-box;
     padding: 0 20px;
   }
+}
 
-  &_name {
-    color: #ffffff;
-    font-family: Gagalin, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: .1em;
-  }
-
+.review__name {
+  color: #ffffff;
+  font-family: Gagalin, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: .1em;
 }
 
 .review__text {
   color: #ffffff;
   font-family: Ubuntu, Helvetica, sans-serif;
+  opacity: 0.8;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
