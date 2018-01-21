@@ -19,7 +19,8 @@
   min-height: 650px;
   display: flex;
   justify-content: center;
-  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   position: relative;
 
@@ -27,22 +28,14 @@
     font-family: Gagalin, Helvetica, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
+    font-size: 72px;
 
     &--orange {
-      font-family: Gagalin, Helvetica, sans-serif;
       color: $orange;
-      font-size: 72px;
-      margin-bottom: 40px;
-      text-transform: uppercase;
     }
 
     &--black {
       color: $black;
-      text-transform: uppercase;
-      font-size: 72px;
-      line-height: 64px;
-      height: 100px;
-      margin-bottom: 50px;
     }
   }
 }

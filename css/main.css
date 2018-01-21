@@ -37,7 +37,9 @@
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 html {
   height: 100%; }
@@ -101,26 +103,19 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   position: relative; }
   .section__title {
     font-family: Gagalin, Helvetica, sans-serif;
     font-weight: 400;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 72px; }
     .section__title--orange {
-      font-family: Gagalin, Helvetica, sans-serif;
-      color: #f9b43b;
-      font-size: 72px;
-      margin-bottom: 40px;
-      text-transform: uppercase; }
+      color: #f9b43b; }
     .section__title--black {
-      color: #2f3234;
-      text-transform: uppercase;
-      font-size: 72px;
-      line-height: 64px;
-      height: 100px;
-      margin-bottom: 50px; }
+      color: #2f3234; }
 
 .button {
   min-width: 6.125rem;
@@ -190,14 +185,13 @@ a {
     margin-left: 0.9375rem; }
   .navigation .button {
     margin-left: 0.9375rem; }
-
-.navigation__link {
-  font-family: 'Ubuntu', Helvetica, sans-serif;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase; }
+  .navigation__link {
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase; }
 
 .company-logotype {
   margin-right: auto; }
@@ -228,14 +222,14 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 45px;
-    padding-left: 11px; }
+    padding-top: 58px; }
   .welcome-content__description {
     font-family: Lifehack, Helvetica, sans-serif;
     font-weight: 500;
     color: #ffffff;
     font-size: 65px;
-    line-height: 60px; }
+    line-height: 60px;
+    margin-top: 20px; }
 
 .burger__img {
   max-width: 100%;
@@ -255,11 +249,20 @@ a {
 
 .scroll__img {
   min-width: 100%;
-  min-height: 100%; }
+  max-height: 100%; }
 
 /* МЫ ЛУЧШИЕ */
 .advantages {
   background-image: url("../img/bg/bg-we.png"); }
+  .advantages .section__title {
+    margin-bottom: 55px; }
+  .advantages .container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .advantages__content {
     width: 100%;
     display: -webkit-box;
@@ -276,17 +279,14 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 100%; }
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -20px; }
+  .advantages__item {
+    margin-left: 20px;
+    margin-bottom: 20px; }
 
-.advantages .container {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.advantage__item {
+.advantage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,31 +294,34 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 300px;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  width: 300px; }
-
-.advantage__img {
-  margin-bottom: 30px; }
-
-.advantage__title {
-  font-family: Lifehack, Helvetica, sans-serif;
-  color: #2f3234;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.6px;
-  text-align: center;
-  margin-bottom: 20px; }
-
-.advantage__text {
-  opacity: 0.8;
-  color: #2f3234;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
-  text-align: center; }
+  align-items: center; }
+  .advantage__icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px; }
+  .advantage__img {
+    min-width: 100%;
+    max-height: 100%; }
+  .advantage__title {
+    font-family: Lifehack, Helvetica, sans-serif;
+    color: #2f3234;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.6px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .advantage__description {
+    opacity: 0.8;
+    color: #2f3234;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center; }
 
 /*ОТЗЫВЫ*/
 .reviews {
@@ -375,23 +378,20 @@ a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 20px; }
-
-.review__name {
-  color: #ffffff;
-  font-family: Gagalin, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: .1em; }
-
-.review__text {
-  color: #ffffff;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  opacity: 0.8;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
-  margin-bottom: 15px; }
+  .review__name {
+    color: #ffffff;
+    font-family: Gagalin, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .1em; }
+  .review__text {
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 15px; }
 
 .review:hover .review__hover {
   -webkit-transform: scale(1);
