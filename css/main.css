@@ -148,7 +148,7 @@ a {
 /* ПРИВЕТСТВИЕ */
 .welcome {
   background-image: url("../img/bg/bg-pic.png"), url("../img/bg/bg-texture.png");
-  background-color: #2f3234; }
+  background-color: black; }
   .welcome__header {
     display: -webkit-box;
     display: -ms-flexbox;

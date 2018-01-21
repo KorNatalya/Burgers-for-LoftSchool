@@ -1,7 +1,7 @@
 /* ПРИВЕТСТВИЕ */
 .welcome {
   background-image: url("../img/bg/bg-pic.png"), url("../img/bg/bg-texture.png");
-  background-color: $black;
+  background-color: black;
   &__header {
     display: flex;
     padding-top: 10px;
