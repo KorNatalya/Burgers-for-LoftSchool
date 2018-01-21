@@ -44,30 +44,3 @@ a {
   white-space: nowrap;
 }
 
-.button {
-  min-width: rem(98px);
-  font-family: Ubuntu, Helvetica, sans-serif;
-  font-size: rem(13px);
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 3px;
-  padding: rem(13px) rem(16px);
-  border: none;
-  cursor: pointer;
-  color: #ffffff;
-  transition: .5s;
-
-  &_action_order {
-    background-color: $salmon-red;
-    &:hover {
-      background-color: darken($salmon-red, 10%);
-    }
-  }
-
-  &_color_black {
-    background-color: $black;
-    &:hover {
-      background-color: darken($black, 10%);
-    }
-  }
-}

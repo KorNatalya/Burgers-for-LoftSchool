@@ -56,15 +56,15 @@
     letter-spacing: .1em;
   }
 
-  &__text {
-    color: #ffffff;
-    font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
-    margin-bottom: 15px;
-  }
+}
 
+.review__text {
+  color: #ffffff;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 15px;
 }
 
 .review:hover .review__hover {

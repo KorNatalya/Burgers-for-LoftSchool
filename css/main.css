@@ -74,29 +74,6 @@ a {
   width: 1px;
   white-space: nowrap; }
 
-.button {
-  min-width: 6.125rem;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 3px;
-  padding: 0.8125rem 1rem;
-  border: none;
-  cursor: pointer;
-  color: #ffffff;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s; }
-  .button_action_order {
-    background-color: #e45028; }
-    .button_action_order:hover {
-      background-color: #c13c18; }
-  .button_color_black {
-    background-color: #2f3234; }
-    .button_color_black:hover {
-      background-color: #171819; }
-
 .wrapper {
   height: 100%; }
 
@@ -145,6 +122,29 @@ a {
       height: 100px;
       margin-bottom: 50px; }
 
+.button {
+  min-width: 6.125rem;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0.8125rem 1rem;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .button_action_order {
+    background-color: #e45028; }
+    .button_action_order:hover {
+      background-color: #c13c18; }
+  .button_color_black {
+    background-color: #2f3234; }
+    .button_color_black:hover {
+      background-color: #171819; }
+
 /* ПРИВЕТСТВИЕ */
 .welcome {
   background-image: url("../img/bg/bg-pic.png"), url("../img/bg/bg-texture.png");
@@ -182,13 +182,6 @@ a {
     margin: 0 12px; }
   .navigation__item:last-child:after {
     display: none; }
-  .navigation__link {
-    font-family: 'Ubuntu', Helvetica, sans-serif;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 30px;
-    text-transform: uppercase; }
   .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -197,6 +190,14 @@ a {
     margin-left: 0.9375rem; }
   .navigation .button {
     margin-left: 0.9375rem; }
+
+.navigation__link {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase; }
 
 .company-logotype {
   margin-right: auto; }
@@ -303,7 +304,6 @@ a {
 
 .advantage__title {
   font-family: Lifehack, Helvetica, sans-serif;
-  font-weight: 500;
   color: #2f3234;
   font-size: 24px;
   line-height: 28px;
@@ -382,13 +382,14 @@ a {
     font-weight: 400;
     line-height: 28px;
     letter-spacing: .1em; }
-  .review__text {
-    color: #ffffff;
-    font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
-    margin-bottom: 15px; }
+
+.review__text {
+  color: #ffffff;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 15px; }
 
 .review:hover .review__hover {
   -webkit-transform: scale(1);
