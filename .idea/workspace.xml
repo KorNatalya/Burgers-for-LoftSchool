@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="567bd0dc-adf6-4dbb-bd74-084f2e6b66e6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/scss/section/_advantages.scss" afterPath="$PROJECT_DIR$/scss/section/_advantages.scss" />
-      <change beforePath="$PROJECT_DIR$/scss/section/_reviews.scss" afterPath="$PROJECT_DIR$/scss/section/_reviews.scss" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-b-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-b-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-light-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-light-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-medium-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-medium-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-regular-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fonts/Ubuntu/ubuntu-regular-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scss/layout/_font.scss" afterPath="$PROJECT_DIR$/scss/layout/_font.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +27,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.54812396">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="94">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="242">
@@ -44,11 +48,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_font.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="_font.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scss/layout/_font.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+                <state relative-caret-position="987">
+                  <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -103,8 +107,8 @@
           <file leaf-file-name="_adjustment.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scss/layout/_adjustment.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="386">
-                  <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+                <state relative-caret-position="827">
+                  <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -210,7 +214,6 @@
         <option value="$PROJECT_DIR$/css/main.scss" />
         <option value="$PROJECT_DIR$/main.css.scss" />
         <option value="$PROJECT_DIR$/stylesheet.css" />
-        <option value="$PROJECT_DIR$/scss/layout/_font.scss" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/scss/config/_variables.scss" />
         <option value="$PROJECT_DIR$/scss/main.scss" />
@@ -223,6 +226,7 @@
         <option value="$PROJECT_DIR$/scss/section/_advantages.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scss/section/_reviews.scss" />
+        <option value="$PROJECT_DIR$/scss/layout/_font.scss" />
       </list>
     </option>
   </component>
@@ -366,12 +370,6 @@
             <path>
               <item name="Burgers" type="b2602c69:ProjectViewProjectNode" />
               <item name="Burgers" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-              <item name="Ubuntu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Burgers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Burgers" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -461,12 +459,12 @@
       <workItem from="1516264174154" duration="24282000" />
       <workItem from="1516349849432" duration="22829000" />
       <workItem from="1516461699958" duration="26676000" />
-      <workItem from="1516524404341" duration="20939000" />
+      <workItem from="1516524404341" duration="21369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154946000" />
+    <option name="totallyTimeSpent" value="155376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1170" extended-state="6" />
@@ -864,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_font.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/section/_advantages.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
@@ -917,8 +907,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/layout/_adjustment.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="827">
+          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/layout/_font.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
           <folding />
         </state>
       </provider>
