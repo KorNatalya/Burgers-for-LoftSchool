@@ -1,0 +1,26 @@
+.team {
+  background-image: url(../img/bg/bg-team.jpg);
+  background-color: #c0afaa;
+  display: flex;
+  justify-content: flex-end;
+
+  &__container{
+    width: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $black;
+  }
+  &__content{
+    border: 2px solid yellow;
+    margin-top: 112px;
+    margin-left: 97px;
+    margin-right: 95px;
+  }
+
+  &__accordeon{
+    border: 2px solid #ff7d2b;
+  }
+
+}
