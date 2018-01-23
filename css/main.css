@@ -115,10 +115,9 @@ a {
     .section__title--orange {
       color: #f9b43b; }
     .section__title--black {
-      color: rgba(47, 50, 52, 0.91); }
+      color: #2f3234; }
 
 .button {
-  min-width: 6.125rem;
   font-family: Ubuntu, Helvetica, sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -136,9 +135,9 @@ a {
     .button_action_order:hover {
       background-color: #c13c18; }
   .button_color_black {
-    background-color: rgba(47, 50, 52, 0.91); }
+    background-color: #2f3234; }
     .button_color_black:hover {
-      background-color: rgba(23, 24, 25, 0.91); }
+      background-color: #171819; }
 
 /* ПРИВЕТСТВИЕ */
 .welcome {
@@ -183,8 +182,7 @@ a {
   .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    color: #ffffff; }
+    display: flex; }
   .navigation__link {
     font-family: 'Ubuntu', Helvetica, sans-serif;
     color: #ffffff;
@@ -192,6 +190,8 @@ a {
     font-weight: 400;
     line-height: 30px;
     text-transform: uppercase; }
+  .navigation__btn {
+    margin-left: 0.9375rem; }
 
 .logo {
   display: block;
@@ -226,9 +226,6 @@ a {
     font-size: 65px;
     line-height: 60px;
     margin-top: 20px; }
-
-.navigation__btn {
-  margin-left: 0.9375rem; }
 
 .burger__img {
   max-width: 100%;
@@ -303,7 +300,7 @@ a {
     max-height: 100%; }
   .advantage__title {
     font-family: Lifehack, Helvetica, sans-serif;
-    color: rgba(47, 50, 52, 0.91);
+    color: #2f3234;
     font-weight: 300;
     font-size: 24px;
     line-height: 28px;
@@ -312,7 +309,7 @@ a {
     margin-bottom: 20px; }
   .advantage__description {
     opacity: 0.8;
-    color: rgba(47, 50, 52, 0.91);
+    color: #2f3234;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -321,27 +318,78 @@ a {
 
 .team {
   background-image: url(../img/bg/bg-team.jpg);
-  background-color: #c0afaa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-  .team__container {
+  background-color: #c0afaa; }
+  .team__block {
     width: 50%;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    position: absolute;
     background-color: rgba(47, 50, 52, 0.91); }
   .team__content {
-    border: 2px solid yellow;
-    margin-top: 112px;
-    margin-left: 97px;
+    margin-top: 113px;
+    margin-left: 98px;
     margin-right: 95px; }
   .team__accordeon {
-    border: 2px solid #ff7d2b; }
+    margin-top: 55px;
+    height: 450px;
+    overflow: hidden;
+    list-style-image: url("../icons/polygon-down.svg");
+    padding-left: 17px; }
+  .team__item {
+    margin-bottom: 35px; }
+  .team__link {
+    color: #ffffff;
+    font-family: Gagalin, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 20;
+    cursor: pointer; }
+  .team__info {
+    overflow: hidden;
+    height: 0;
+    z-index: 10;
+    position: relative;
+    -webkit-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .team__photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  .team__description {
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 21px;
+    width: 230px; }
+  .team__title {
+    font-weight: 700;
+    margin-bottom: 15px; }
+  .team__text {
+    font-weight: 300;
+    line-height: 24px; }
+
+input:checked + label:hover:after {
+  list-style-image: url("../icons/polygon-up.svg"); }
+
+.team__input:checked + .team__link,
+.team__input:checked + .team__link:hover {
+  color: #f9b43b; }
+
+.team__input {
+  display: none; }
+
+.team__input:checked ~ .team__info {
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  height: 100px;
+  width: 333px;
+  margin-top: 17px; }
 
 /*ОТЗЫВЫ*/
 .reviews {
