@@ -1,6 +1,7 @@
 .team {
   background-image: url(../img/bg/bg-team.jpg);
   background-color: #c0afaa;
+  position: relative;
 
   &__block {
     width: 50%;
@@ -13,19 +14,13 @@
     padding-right: 95px;
     padding-top: 113px;
   }
-  &__content {
-    //margin-top: 113px;
-    //margin-left: 98px;
-    //margin-right: 95px;
-  }
 }
-.team-accordeon {
-    margin-top: 55px;
 
+.team-accordeon {
+  margin-top: 55px;
 
   &__item {
     margin-bottom: 35px;
-    list-style-image: url(../icons/polygon.svg);
     position: relative;
   }
 
@@ -36,21 +31,14 @@
     font-weight: 400;
     cursor: pointer;
     margin-bottom: 15px;
-    display: block;
+    display: flex;
     transition: all .1s ease;
   }
 
-  &__content-wrapper {
+  &__content {
     height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-  &__content {
-    //overflow: hidden;
-    //height: 100px;
     display: flex;
-    border: 2px solid rgba(44, 255, 224, 0.85);
-
   }
 
   &__avatar {
@@ -58,7 +46,8 @@
     height: 100px;
 
   }
-  &__avatar-img{
+
+  &__avatar-img {
     min-width: 100%;
     max-height: 100%;
     border-radius: 50%;
@@ -71,6 +60,7 @@
     margin-left: 21px;
     width: 230px;
   }
+
   &__title {
     font-weight: 700;
     margin-bottom: 15px;
@@ -82,27 +72,31 @@
   }
 }
 
-
-.team-accordeon__trigger:hover{
-  color: $orange;
-  transition: .2s ease-in-out;
-}
-
-.team-accordeon__trigger:hover .accordeon__content-wrapper {
-  background-color: rgba(199, 21, 133, 0.58);
-  height: 100px;
-
-}
-
 .team-accordeon__trigger:before {
-  content: ' ';
-  vertical-align: baseline;
+  content: '';
+  display: block;
   width: 0;
   height: 0;
-  margin-right: 10px;
+  border: 9px solid transparent;
+  border-bottom-width: 0;
+  border-top-color: $orange;
+  margin-right: 8px;
+}
+
+.team-accordeon__item--active {
+  .team-accordeon__trigger {
+    color: $orange;
+
+    &:before {
+      transform: rotate(180deg);
+    }
   }
 
-.team-accordeon__trigger, .team-accordeon__trigger:before {
-  display: inline-block;
-  transition: .2s ease-out;
+  .team-accordeon__content {
+    display: flex;
+  }
+
+  .team-accordeon__content {
+    height: auto;
+  }
 }
