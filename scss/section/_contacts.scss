@@ -1,0 +1,42 @@
+.contacts {
+  background-image: url("../img/content/map.png");
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    min-width: 100%;
+    background-image: url("../img/content/footer-texture.png");
+    background-size: cover;
+    }
+}
+
+.footer-content {
+  display: flex;
+  padding-left: 80px;
+  padding-right: 80px;
+  align-items: center;
+  height: 100%;
+
+  &__info {
+    width: 50%;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  &__address {
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  &__tel {
+    font-weight: 700;
+    color: $salmon-red;
+  }
+
+  &__soc {
+    width: 50%;
+    //display: flex;
+    text-align: right;
+    color: white;
+  }
+}

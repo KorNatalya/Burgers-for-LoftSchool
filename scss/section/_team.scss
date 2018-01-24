@@ -9,59 +9,65 @@
     bottom: 0;
     position: absolute;
     background-color: rgba(47, 50, 52, 0.91);
+    padding-left: 98px;
+    padding-right: 95px;
+    padding-top: 113px;
   }
   &__content {
-    //border: 2px solid yellow;
-    margin-top: 113px;
-    margin-left: 98px;
-    margin-right: 95px;
+    //margin-top: 113px;
+    //margin-left: 98px;
+    //margin-right: 95px;
   }
-
-  &__accordeon {
+}
+.team-accordeon {
     margin-top: 55px;
-    height: 450px;
-    overflow: hidden;
-    padding-left: 17px;
-  }
+
 
   &__item {
     margin-bottom: 35px;
     list-style-image: url(../icons/polygon.svg);
+    position: relative;
   }
 
-  &__link {
+  &__trigger {
     color: #ffffff;
     font-family: Gagalin, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    z-index: 20;
     cursor: pointer;
     margin-bottom: 15px;
     display: block;
-    width: 200px;
-    transition: .1s ease-in-out;
+    transition: all .1s ease;
   }
 
-  &__info {
-    overflow: hidden;
+  &__content-wrapper {
     height: 0;
-    z-index: 10;
-    position: relative;
-    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  &__content {
+    //overflow: hidden;
+    //height: 100px;
     display: flex;
+    border: 2px solid rgba(44, 255, 224, 0.85);
+
   }
 
-  &__photo {
+  &__avatar {
     width: 100px;
     height: 100px;
+
+  }
+  &__avatar-img{
+    min-width: 100%;
+    max-height: 100%;
     border-radius: 50%;
   }
 
-  &__description {
+  &__text {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 14px;
-
     margin-left: 21px;
     width: 230px;
   }
@@ -70,21 +76,33 @@
     margin-bottom: 15px;
   }
 
-  &__text {
+  &__description {
     font-weight: 300;
     line-height: 24px;
   }
 }
 
-.team__input:checked + .team__link {
+
+.team-accordeon__trigger:hover{
   color: $orange;
+  transition: .2s ease-in-out;
 }
 
-.team__input {
-  display: none;
-}
-
-.team__input:checked ~ .team__info {
-  transition: height 0.3s ease-in-out;
+.team-accordeon__trigger:hover .accordeon__content-wrapper {
+  background-color: rgba(199, 21, 133, 0.58);
   height: 100px;
+
+}
+
+.team-accordeon__trigger:before {
+  content: ' ';
+  vertical-align: baseline;
+  width: 0;
+  height: 0;
+  margin-right: 10px;
+  }
+
+.team-accordeon__trigger, .team-accordeon__trigger:before {
+  display: inline-block;
+  transition: .2s ease-out;
 }

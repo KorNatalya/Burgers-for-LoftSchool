@@ -52,7 +52,7 @@
     top: 90%;
     transform: rotate(-90deg);
     transform-origin: left top 0;
-    transition: .1s ease-in-out;
+    //transition: .1s ease-in-out;
   }
 
   &__text {
@@ -76,14 +76,16 @@
   display: none;
 }
 
-.menu__input:checked + .menu__link,
-.menu__input:checked + .menu__link:hover {
+.menu__link{
+  transition: all .2s ease-in;
+}
+.menu__link:hover {
   color: $orange;
-
+  transition: all .2s ease-in-out;
 }
 
-.menu__input:checked ~ .menu__text {
-  transition: width 0.3s ease-in-out;
-  width: 744px;
-}
+//.menu__input:checked ~ .menu__text {
+//  transition: width 0.1s ease-in-out;
+//  width: 744px;
+//}
 
