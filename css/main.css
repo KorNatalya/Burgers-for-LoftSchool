@@ -115,7 +115,7 @@ a {
     .section__title--orange {
       color: #f9b43b; }
     .section__title--black {
-      color: #2f3234; }
+      color: rgba(47, 50, 52, 0.81); }
     .section__title--white {
       color: white; }
 
@@ -137,9 +137,9 @@ a {
     .button_action_order:hover {
       background-color: #c13c18; }
   .button_color_black {
-    background-color: #2f3234; }
+    background-color: rgba(47, 50, 52, 0.81); }
     .button_color_black:hover {
-      background-color: #171819; }
+      background-color: rgba(23, 24, 25, 0.81); }
 
 /* ПРИВЕТСТВИЕ */
 .welcome {
@@ -304,7 +304,7 @@ a {
     text-align: center; }
   .advantage__title {
     font-family: Lifehack, Helvetica, sans-serif;
-    color: #2f3234;
+    color: rgba(47, 50, 52, 0.81);
     font-weight: 300;
     font-size: 24px;
     line-height: 28px;
@@ -312,7 +312,7 @@ a {
     margin-bottom: 20px; }
   .advantage__desc {
     opacity: 0.8;
-    color: #2f3234;
+    color: rgba(47, 50, 52, 0.81);
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -489,35 +489,38 @@ a {
     margin-left: 94px;
     position: absolute;
     left: 0; }
-  .menu__accordeon {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .menu__item {
+
+.menu-accordeon {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .menu-accordeon__item {
     height: 100%;
-    position: relative;
-    width: 80px;
+    min-width: 5%;
+    max-width: 700px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #2f3234; }
-  .menu__item-formeat {
-    background-image: url("../img/content/formeat.png"); }
-  .menu__item-forveg {
-    background-image: url("../img/content/forveg.png"); }
-  .menu__item-fordiet {
-    background-image: url("../img/content/fordiet.png"); }
-  .menu__link {
+    background-color: rgba(47, 50, 52, 0.81);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .menu-accordeon__item-meat {
+    background-image: url("../img/content/meat.jpg"); }
+  .menu-accordeon__item-veg {
+    background-image: url("../img/content/veg.jpg"); }
+  .menu-accordeon__item-diet {
+    background-image: url("../img/content/diet.jpg"); }
+  .menu-accordeon__trigger {
     color: #ffffff;
     font-family: Gagalin, Helvetica, sans-serif;
     font-size: 40px;
     font-weight: 400;
     line-height: 80px;
-    z-index: 20;
     cursor: pointer;
     position: absolute;
     width: 500px;
@@ -527,33 +530,44 @@ a {
     transform: rotate(-90deg);
     -webkit-transform-origin: left top 0;
     -ms-transform-origin: left top 0;
-    transform-origin: left top 0; }
-  .menu__text {
+    transform-origin: left top 0;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .menu-accordeon__content {
+    width: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 83px; }
+  .menu-accordeon__text {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
+    height: 100vh;
     overflow: hidden;
-    width: 0;
-    z-index: 10;
     position: relative;
-    -webkit-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #2f3234; }
+    background-color: rgba(47, 50, 52, 0.81);
+    padding-top: 12%;
+    padding-left: 7%;
+    padding-right: 7%; }
 
-.menu__input {
-  display: none; }
+.menu-accordeon__item--active .menu-accordeon__trigger {
+  color: #f9b43b; }
 
-.menu__link:hover {
-  color: #f9b43b;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
+.menu-accordeon__item--active .menu-accordeon__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu-accordeon__item--active .menu-accordeon__content {
+  width: auto; }
 
 .contacts {
   background-image: url("../img/content/map.png"); }
