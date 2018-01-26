@@ -80,17 +80,18 @@
 
         </section>
 
-
         <!-- МЫ ЛУЧШИЕ -->
         <section class="section advantages">
             <div class="container">
                 <div class="advantages__content">
-                    <span class="section__title section__title--black">Мы лучшие</span>
+                    <span class="section__title section__title--black ">Мы лучшие</span>
                     <ul class="advantages__list">
                         <li class="advantages__item">
                             <div class="advantage">
                                 <div class="advantage__icon">
-                                    <img src="./icons/meat.svg" alt="Свежее мясо" class="advantage__img">
+                                    <svg class="icon-best icon-best__meat">
+                                        <use xlink:href="icons/sprite.svg#meat"></use>
+                                    </svg>
                                 </div>
                                 <div class="advantage__info">
                                     <h5 class="advantage__title">100% свежее мясо</h5>
@@ -106,7 +107,9 @@
                         <li class="advantages__item">
                             <div class="advantage">
                                 <div class="advantage__icon">
-                                    <img src="./icons/hand.svg" alt="Ручная сборка" class="advantage__img">
+                                    <svg class="icon-best icon-best__hand">
+                                        <use xlink:href="icons/sprite.svg#hand"></use>
+                                    </svg>
                                 </div>
                                 <div class="advantage__info">
                                     <h5 class="advantage__title">Ручная сборка</h5>
@@ -120,7 +123,9 @@
                         <li class="advantages__item">
                             <div class="advantage">
                                 <div class="advantage__icon">
-                                    <img src="./icons/natural.svg" alt="Натуральные ингредиенты" class="advantage__img">
+                                    <svg class="icon-best icon-best__natural">
+                                        <use xlink:href="icons/sprite.svg#natural"></use>
+                                    </svg>
                                 </div>
                                 <div class="advantage__info">
                                     <h5 class="advantage__title">Натуральные ингредиенты</h5>
@@ -161,12 +166,12 @@
                         <li class="team-accordeon__item team-accordeon__item--active">
                             <a href="" class="team-accordeon__trigger">Ричард Джеймс</a>
                             <div class="team-accordeon__content">
-                                <div class="team-accordeon__avatar">
-                                    <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__avatar-img">
+                                <div class="team-accordeon__photo">
+                                    <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
                                 </div>
                                 <div class="team-accordeon__text">
                                     <div class="team-accordeon__title">Оператор</div>
-                                    <div class="team-accordeon__description">
+                                    <div class="team-accordeon__desc">
                                         <p>С радостью поможет подобрать идеальный
                                             бургер и оформить заказ.</p>
                                     </div>
@@ -176,12 +181,12 @@
                         <li class="team-accordeon__item">
                             <a href="" class="team-accordeon__trigger">Джейк Финн</a>
                             <div class="team-accordeon__content">
-                                <div class="team-accordeon__avatar">
-                                    <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__avatar-img">
+                                <div class="team-accordeon__photo">
+                                    <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
                                 </div>
                                 <div class="team-accordeon__text">
                                     <div class="team-accordeon__title">Оператор</div>
-                                    <div class="team-accordeon__description">
+                                    <div class="team-accordeon__desc">
                                         <p>С радостью поможет подобрать идеальный
                                             бургер и оформить заказ.</p>
                                     </div>
@@ -191,12 +196,12 @@
                         <li class="team-accordeon__item">
                             <a href="" class="team-accordeon__trigger">Николай Иванов</a>
                             <div class="team-accordeon__content">
-                                <div class="team-accordeon__avatar">
-                                    <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__avatar-img">
+                                <div class="team-accordeon__photo">
+                                    <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
                                 </div>
                                 <div class="team-accordeon__text">
                                     <div class="team-accordeon__title">Оператор</div>
-                                    <div class="team-accordeon__description"><p>С радостью поможет подобрать
+                                    <div class="team-accordeon__desc"><p>С радостью поможет подобрать
                                         идеальный бургер и оформить заказ.</p>
                                     </div>
                                 </div>
@@ -208,13 +213,13 @@
         </section>
 
         <!--МЕНЮ-->
-
         <section class="section menu">
             <h2 class="menu__title section__title section__title--white">Меню</h2>
             <ul class="menu-accordeon">
-                <li class="menu-accordeon__item menu-accordeon__item-meat menu-accordeon__item--active">
-
-                    <h2 class="menu-accordeon__trigger">Для мясоедов</h2>
+                <li class="menu-accordeon__item menu-accordeon__item--active">
+                    <a class="menu-accordeon__trigger menu-accordeon__trigger-meat">
+                        <span class="menu-accordeon__title">Для мясоедов</span>
+                    </a>
                     <div class="menu-accordeon__content">
                         <div class="menu-accordeon__text">
                             <p>Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -231,8 +236,10 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu-accordeon__item menu-accordeon__item-veg">
-                    <div class="menu-accordeon__trigger">Вегетарианское</div>
+                <li class="menu-accordeon__item">
+                    <a class="menu-accordeon__trigger menu-accordeon__trigger-veg">
+                        <span class="menu-accordeon__title">Вегетарианское</span>
+                    </a>
                     <div class="menu-accordeon__content">
                         <div class="menu-accordeon__text">
                             <p>Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -249,9 +256,10 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu-accordeon__item menu-accordeon__item-diet">
-
-                    <div class="menu-accordeon__trigger">Диетическое</div>
+                <li class="menu-accordeon__item">
+                    <a class="menu-accordeon__trigger menu-accordeon__trigger-diet">
+                        <span class="menu-accordeon__title">Диетическое</span>
+                    </a>
                     <div class="menu-accordeon__content">
                         <div class="menu-accordeon__text">
                             <p>Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -268,6 +276,7 @@
                 </li>
             </ul>
         </section>
+
         <!--ОТЗЫВЫ-->
         <section class="section reviews">
             <ul class="reviews__list">
@@ -354,6 +363,83 @@
             </ul>
         </section>
 
+        <!--ДОСТАВКА-->
+        <section class="section delivery">
+            <div class="container">
+                <h1 class="section__title section__title--orange section__title--center">Закажите доставку</h1>
+
+                <div class="delivery__form">
+                    <form action="" class="form">
+                        <div class="form--left">
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__title">Имя</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__title">Телефон</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__title">Улица</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__title">Дом</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__title">Корпус</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__title">Квартира</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__title">Этаж</div>
+                                    <input type="text" name="" class="form__input">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form--right">
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__title">Комментарий</div>
+                                    <textarea type="text" name="" class="form__textarea" rows="10" cols="45"></textarea>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <span><input type="radio" name="payment" value="cash" class="form__radio">Потребуется сдача</span>
+                                    <span><input type="radio" name="payment" value="card" class="form__radio" checked>Оплата по карте</span>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <span><input type="checkbox" name="call" value="donotcall" class="form__checkbox"
+                                                 checked>Не перезванивать</span>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <p>
+                                        <button class="button button_action_order" value="Order">Заказать</button>
+                                        <input type="reset" value="Очистить" class="form__reset">
+                                    </p>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!--КОНТАКТЫ-->
         <section class="section contacts">
             <div class="contacts__map">
@@ -368,12 +454,32 @@
                         <div class="footer-content__tel">+7 (812) 377-13-77</div>
                     </div>
                     <div class="footer-content__soc">
-
+                        <a href="" class="footer-content__soc--link">
+                            <svg class="footer-content__soc--icon">
+                                <use xlink:href="icons/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer-content__soc--link">
+                            <svg class="footer-content__soc--icon" >
+                                <use xlink:href="icons/sprite.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer-content__soc--link" >
+                            <svg class="footer-content__soc--icon">
+                                <use xlink:href="icons/sprite.svg#inst"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer-content__soc--link">
+                            <svg class="footer-content__soc--icon">
+                                <use xlink:href="icons/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
             </footer>
         </section>
+
     </div>
 </div>
 

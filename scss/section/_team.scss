@@ -41,15 +41,16 @@
     display: flex;
   }
 
-  &__avatar {
+  &__photo {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
-  &__avatar-img {
+  &__photo-img {
     min-width: 100%;
     max-height: 100%;
-    border-radius: 50%;
   }
 
   &__text {
@@ -65,7 +66,7 @@
     margin-bottom: 15px;
   }
 
-  &__description {
+  &__desc {
     font-weight: 300;
     line-height: 24px;
   }

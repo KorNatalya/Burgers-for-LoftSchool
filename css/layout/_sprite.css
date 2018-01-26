@@ -1,0 +1,11 @@
+.icon-soc {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  fill: #ff8ea9;
+  width: 25px;
+  height: 25px; }
+  .icon-soc:hover {
+    fill: #ff0172; }
+  .icon-soc:first-child {
+    margin-left: 0; }

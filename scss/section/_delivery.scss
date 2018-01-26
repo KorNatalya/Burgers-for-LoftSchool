@@ -1,0 +1,98 @@
+.delivery {
+  background-image: url('../img/bg/bg-texture-delivery.png'), url('../img/bg/bg-delivery.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__form {
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 50px;
+  }
+}
+
+.form {
+  display: flex;
+
+  &--left {
+    width: 50%;
+    margin-right: 10px;
+
+  }
+  &--right {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  &__block {
+    display: block;
+    flex: 1;
+    margin-right: 19px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    span {
+      margin-right: 20px;
+    }
+    button {
+      margin-right: 20px;
+    }
+  }
+  &__reset {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__input {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #d1cfcb;
+    border-radius: 3px;
+    width: 100%;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $black;
+    height: 35px;
+  }
+
+  &__textarea {
+    max-height: 115px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #d1cfcb;
+    border-radius: 3px;
+    width: 100%;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $black;
+  }
+
+  &__radio, &__checkbox {
+    cursor: pointer;
+    margin-right: 10px;
+    border: none;
+    }
+}
+
+
+
+
+
+
+
+

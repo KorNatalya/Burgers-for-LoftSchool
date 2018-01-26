@@ -1,0 +1,32 @@
+.footer-content__soc--icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  fill: #5b5b5b;
+  width: 20px;
+  height: 20px;
+  &:hover {
+    fill: #ffff;
+  }
+  &:first-child{
+    margin-left: 0;
+  }
+}
+
+.icon-best {
+  min-width: 100%;
+  max-height: 100%;
+  //display: flex;
+  //align-items: center;
+  &__meat{
+    fill: $salmon-red;
+  }
+  &__hand {
+    fill: $orange;
+  }
+
+  &__natural {
+    fill: #8ac03e;
+  }
+
+}
