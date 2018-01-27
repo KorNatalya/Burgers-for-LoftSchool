@@ -83,6 +83,7 @@
   cursor: pointer;
   color: #ffffff;
   transition: .5s;
+  display: inline-block;
 
   @include tablet{
     padding: rem(12px) rem(15px);
@@ -103,3 +104,4 @@
     }
   }
 }
+
