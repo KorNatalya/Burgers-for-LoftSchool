@@ -4,7 +4,7 @@
   &__footer {
     position: absolute;
     bottom: 0;
-    height: 60px;
+    height: rem(60px);
     min-width: 100%;
     background-image: url("../img/content/footer-texture.png");
     background-size: cover;
@@ -13,20 +13,20 @@
 
 .footer-content {
   display: flex;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: rem(80px);
+  padding-right: rem(80px);
   align-items: center;
   height: 100%;
 
   &__info {
     width: 50%;
     font-family: 'Ubuntu', Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: rem(14px);
   }
   &__address {
     color: #ffffff;
     font-weight: 300;
-    line-height: 24px;
+    line-height: rem(24px);
   }
   &__tel {
     font-weight: 700;
@@ -38,9 +38,9 @@
   }
 
   &__soc--link{
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
+    width: rem(20px);
+    height: rem(20px);
+    margin-left: rem(20px);
     display: inline-block;
   }
   &__soc--icon{

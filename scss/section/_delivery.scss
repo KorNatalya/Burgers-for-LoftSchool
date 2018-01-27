@@ -7,8 +7,8 @@
   &__form {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
-    margin-top: 50px;
+    font-size: rem(14px);
+    margin-top: rem(50px);
   }
 }
 
@@ -17,32 +17,32 @@
 
   &--left {
     width: 50%;
-    margin-right: 10px;
+    margin-right: rem(10px);
 
   }
   &--right {
     width: 50%;
-    margin-left: 10px;
+    margin-left: rem(10px);
   }
 
   &__row {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     display: flex;
   }
 
   &__block {
     display: block;
     flex: 1;
-    margin-right: 19px;
+    margin-right: rem(19px);
 
     &:last-child {
       margin-right: 0;
     }
     span {
-      margin-right: 20px;
+      margin-right: rem(20px);
     }
     button {
-      margin-right: 20px;
+      margin-right: rem(20px);
     }
   }
   &__reset {
@@ -53,23 +53,23 @@
   }
 
   &__input {
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: rem(10px);
+    padding: rem(10px) rem(20px);
     background-color: white;
-    border: 1px solid #d1cfcb;
-    border-radius: 3px;
+    border: rem(1px) solid #d1cfcb;
+    border-radius: rem(3px);
     width: 100%;
     font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
-    line-height: 24px;
+    line-height: rem(24px);
     color: $black;
-    height: 35px;
+    height: rem(35px);
   }
 
   &__textarea {
-    max-height: 115px;
-    margin-top: 10px;
+    max-height: rem(115px);
+    margin-top: rem(10px);
     padding: 10px 20px;
     background-color: white;
     border: 1px solid #d1cfcb;

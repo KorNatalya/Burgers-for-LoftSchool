@@ -1,22 +1,36 @@
 .wrapper {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  margin: 0 auto;
+  max-width: rem(940px);
+  width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
+
+  @include tablet() {
+    max-width: 95%;
+    min-height: rem(544px);
+  }
+
+  @include phone() {
+    max-width: 95%;
+    min-height: rem(544px);
+  }
 }
 
 .maincontent {
   height: 100%;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
@@ -28,7 +42,7 @@
     font-family: Gagalin, Helvetica, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 72px;
+    font-size: rem(72px);
     display: flex;
 
     &--orange {
@@ -44,6 +58,17 @@
     &--center {
       justify-content: center;
     }
+
+    @include tablet {
+      justify-content: center;
+      font-size: rem(64px);
+
+    }
+    @include phone {
+      justify-content: center;
+      font-size: rem(54px);
+
+    }
   }
 }
 
@@ -52,12 +77,17 @@
   font-size: rem(13px);
   font-weight: 500;
   text-transform: uppercase;
-  border-radius: 3px;
+  border-radius: rem(3px);
   padding: rem(13px) rem(16px);
   border: none;
   cursor: pointer;
   color: #ffffff;
   transition: .5s;
+
+  @include tablet{
+    padding: rem(12px) rem(15px);
+    font-size: rem(12px);
+  }
 
   &_action_order {
     background-color: $salmon-red;

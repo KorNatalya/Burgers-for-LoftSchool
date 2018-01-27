@@ -1,10 +1,10 @@
 .footer-content__soc--icon {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 20px;
+  margin-left: rem(20px);
   fill: #5b5b5b;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   &:hover {
     fill: #ffff;
   }

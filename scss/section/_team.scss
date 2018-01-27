@@ -10,40 +10,57 @@
     bottom: 0;
     position: absolute;
     background-color: rgba(47, 50, 52, 0.91);
-    padding-left: 98px;
-    padding-right: 95px;
-    padding-top: 113px;
+    padding-left: rem(98px);
+    padding-right: rem(95px);
+    padding-top: rem(113px);
+
+    @include tablet{
+      left: 0;
+      width: 100%;
+    }
+
+    @include phone{
+      left: 0;
+      width: 100%;
+    }
   }
 }
 
 .team-accordeon {
-  margin-top: 55px;
+  margin-top: rem(55px);
 
   &__item {
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
     position: relative;
   }
 
   &__trigger {
     color: #ffffff;
     font-family: Gagalin, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 400;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
     display: flex;
     transition: all .1s ease;
+    position: relative;
+  }
+
+
+
+  &__content-wrap {
+    height: 0;
+    overflow: hidden;
+
   }
 
   &__content {
-    height: 0;
-    overflow: hidden;
     display: flex;
   }
 
   &__photo {
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     border-radius: 50%;
     overflow: hidden;
   }
@@ -56,9 +73,9 @@
   &__text {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: rem(14px);
     margin-left: 21px;
-    width: 230px;
+    width: 220px;
   }
 
   &__title {
@@ -77,18 +94,21 @@
   display: block;
   width: 0;
   height: 0;
-  border: 9px solid transparent;
-  border-bottom-width: 0;
-  border-top-color: $orange;
+  border: 6px solid transparent;
+  border-top: 8px solid $orange;
+  //border-bottom-width: 0;
+  //border-top-color: $orange;
   margin-right: 8px;
+  transform: translateY(40%) rotate(0deg);
+  transition: .5s;
 }
 
 .team-accordeon__item--active {
   .team-accordeon__trigger {
     color: $orange;
 
-    &:before {
-      transform: rotate(180deg);
+    &::before {
+      transform: translateY(-20%) rotate(180deg);
     }
   }
 
@@ -96,7 +116,7 @@
     display: flex;
   }
 
-  .team-accordeon__content {
+  .team-accordeon__content-wrap {
     height: auto;
   }
 }
