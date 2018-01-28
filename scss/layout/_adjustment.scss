@@ -38,6 +38,10 @@
   background-size: cover;
   position: relative;
 
+  @include phone{
+    min-width: rem(320px);
+  }
+
   &__title {
     font-family: Gagalin, Helvetica, sans-serif;
     font-weight: 400;
@@ -57,6 +61,7 @@
     }
     &--center {
       justify-content: center;
+      text-align: center;
     }
 
     @include tablet {
@@ -66,8 +71,7 @@
     }
     @include phone {
       justify-content: center;
-      font-size: rem(54px);
-
+      font-size: rem(50px);
     }
   }
 }

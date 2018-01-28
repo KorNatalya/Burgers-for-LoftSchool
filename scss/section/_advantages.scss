@@ -3,12 +3,12 @@
 .advantages {
   background-image: url("../img/bg/bg-we.png");
 
-    //@include tablet{
-    //  background-image: url("");
-    //}
+  @include tablet {
+    background-image: url("../img/bg/bg-best/bg-best-tablet.png");
+  }
 
-    @include phone {
-    background-image: url("../img/bg/phone/bg-adv.png");
+  @include phone {
+    background-image: url("../img/bg/bg-best/bg-best.png");
   }
 
   .section__title {
@@ -28,28 +28,29 @@
     display: flex;
     margin-left: rem(-20px);
 
-    @include tablet{
+    @include tablet {
       display: flex;
       justify-content: center;
     }
-    @include phone{
+    @include phone {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin: 0;
     }
   }
   &__item {
     margin-left: rem(20px);
     margin-bottom: rem(20px);
     width: 60%;
-    @include tablet{
+    @include tablet {
       width: 30%;
     }
-    @include phone{
-      width: 90%;
+    @include phone {
+      width: 100%;
+      margin-left: 0;
     }
-
-   }
+  }
 }
 
 .advantage {
@@ -57,7 +58,7 @@
   flex-direction: column;
   align-items: center;
 
-  @include phone{
+  @include phone {
     flex-direction: row;
   }
 
@@ -68,22 +69,22 @@
     display: flex;
   }
 
-    &__info {
+  &__info {
     text-align: center;
 
-      @include phone{
-        text-align: left;
-        margin-left: rem(28px);
-      }
+    @include phone {
+      text-align: left;
+      margin-left: rem(28px);
+    }
   }
   &__title {
     font-family: Lifehack, Helvetica, sans-serif;
     color: $black;
     font-weight: 300;
     font-size: rem(24px);
-    line-height: rem(28px);
+    line-height: rem(24px);
     letter-spacing: rem(-0.6px);
-    margin-bottom: rem(20px);
+    margin-bottom: 7%;
   }
 
   &__desc {

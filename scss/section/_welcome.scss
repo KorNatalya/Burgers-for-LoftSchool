@@ -21,11 +21,7 @@
   display: flex;
   align-items: center;
 
-  @include tablet() {
-    display: none;
-  }
-
-  &__item {
+   &__item {
     &:after {
       display: inline-block;
       vertical-align: middle;
@@ -56,6 +52,10 @@
   }
   &__btn {
     margin-left: rem(15px);
+
+    @include tablet() {
+
+    }
   }
 }
 
@@ -109,6 +109,9 @@
     }
     @include phone {
       width: 100%;
+      .section__title{
+        font-size: rem(54px);
+      }
     }
   }
 

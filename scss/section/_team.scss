@@ -23,11 +23,11 @@
       justify-content: center;
       align-items: center;
     }
+  }
 
-    @include phone {
-      //left: 0;
-      //width: 100%;
-      //padding: 0;
+  &__content {
+    @include tablet {
+      min-width: 100%;
     }
   }
 }
@@ -38,6 +38,10 @@
   &__item {
     margin-bottom: rem(35px);
     position: relative;
+
+    @include tablet {
+      margin-bottom: rem(25px);
+    }
   }
 
   &__trigger {
@@ -59,6 +63,11 @@
   &__content-wrap {
     height: 0;
     overflow: hidden;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__content {
@@ -68,6 +77,10 @@
     @include tablet {
       flex-direction: column;
       align-items: center;
+      min-width: 50%;
+    }
+    @include phone{
+      min-width: 75%;
     }
   }
 
@@ -94,13 +107,16 @@
       text-align: center;
       margin-left: 0;
       margin-top: 15px;
+      min-width: 100%;
+    }
+    @include phone {
+      min-width: 100%;
     }
   }
 
   &__title {
     font-weight: 700;
     margin-bottom: 15px;
-
   }
 
   &__desc {
