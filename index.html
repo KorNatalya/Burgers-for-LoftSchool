@@ -30,30 +30,35 @@
                     <a href="/" class="logo">
                         <img src="icons/logo.svg" alt="logo" class="logo__img">
                     </a>
-                    <nav class="navigation">
-                        <ul class="navigation__list">
-                            <li class="navigation__item">
-                                <a href="#" class="navigation__link">О нас</a>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">О нас</a>
                             </li>
-                            <li class="navigation__item">
-                                <a href="#" class="navigation__link">Бургеры</a>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Бургеры</a>
                             </li>
-                            <li class="navigation__item">
-                                <a href="#" class="navigation__link">Команда</a>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Команда</a>
                             </li>
-                            <li class="navigation__item">
-                                <a href="#" class="navigation__link">Меню</a>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Меню</a>
                             </li>
-                            <li class="navigation__item">
-                                <a href="#" class="navigation__link">Отзывы</a>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Отзывы</a>
                             </li>
-                            <li class="navigation__item">
-                                <a href="#" class="navigation__link">Контакты</a>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Контакты</a>
                             </li>
                         </ul>
 
-                        <div class="navigation__btn">
+
+                        <div class="nav__btn">
                             <button class="button button_action_order" value="Order">Заказать</button>
+                        </div>
+                        <div class="hamb-menu">
+                            <a href="" class="hamb-menu__link"><img src="./icons/hamb.png" alt="menu"
+                                                                    hamb-menu__img></a>
                         </div>
                     </nav>
                 </header>
@@ -63,9 +68,9 @@
                         <div class="welcome-content__burger">
                             <img src="img/content/burger.png" alt="Бургер" class="burger__img">
                         </div>
-                        <div class="welcome-content__inscription">
+                        <div class="welcome-content__insc">
                             <span class="section__title section__title--orange">Мы делаем</span>
-                            <span class="welcome-content__description">натуральные</br>бургеры</span>
+                            <span class="welcome-content__desc">натуральные</br>бургеры</span>
                         </div>
                     </div>
                 </div>
@@ -82,12 +87,12 @@
         </section>
 
         <!-- МЫ ЛУЧШИЕ -->
-        <section class="section advantages">
+        <section class="section best">
             <div class="container">
-                <div class="advantages__content">
+                <div class="best__content">
                     <span class="section__title section__title--black ">Мы лучшие</span>
-                    <ul class="advantages__list">
-                        <li class="advantages__item">
+                    <ul class="best__list">
+                        <li class="best__item">
                             <div class="advantage">
                                 <div class="advantage__icon">
                                     <svg class="icon-best icon-best__meat">
@@ -104,7 +109,7 @@
                             </div>
                         </li>
 
-                        <li class="advantages__item">
+                        <li class="best__item">
                             <div class="advantage">
                                 <div class="advantage__icon">
                                     <svg class="icon-best icon-best__hand">
@@ -119,7 +124,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="advantages__item">
+                        <li class="best__item">
                             <div class="advantage">
                                 <div class="advantage__icon">
                                     <svg class="icon-best icon-best__natural">
@@ -144,17 +149,17 @@
             <div class="team__block">
                 <div class="team__content">
                     <h2 class="section__title section__title--orange">Команда</h2>
-                    <ul class="team-accordeon">
-                        <li class="team-accordeon__item">
-                            <a href="" class="team-accordeon__trigger">Дэниэл Редклиф</a>
-                            <div class="team-accordeon__content-wrap">
-                                <div class="team-accordeon__content">
-                                    <div class="team-accordeon__photo">
-                                        <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
+                    <ul class="team-acco">
+                        <li class="team-acco__item">
+                            <a href="" class="team-acco__trigger">Дэниэл Редклиф</a>
+                            <div class="team-acco__content-wrap">
+                                <div class="team-acco__content">
+                                    <div class="team-acco__photo">
+                                        <img src="./img/photos/aphex.jpg" alt="" class="team-acco__photo-img">
                                     </div>
-                                    <div class="team-accordeon__text">
-                                        <div class="team-accordeon__title">Оператор</div>
-                                        <div class="team-accordeon__description">
+                                    <div class="team-acco__text">
+                                        <div class="team-acco__title">Оператор</div>
+                                        <div class="team-acco__desc">
                                             <p>С радостью поможет подобрать идеальный
                                                 бургер и оформить заказ.
                                             </p>
@@ -163,16 +168,16 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="team-accordeon__item team-accordeon__item--active">
-                            <a href="" class="team-accordeon__trigger">Ричард Джеймс</a>
-                            <div class="team-accordeon__content-wrap">
-                                <div class="team-accordeon__content">
-                                    <div class="team-accordeon__photo">
-                                        <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
+                        <li class="team-acco__item team-acco__item--active">
+                            <a href="" class="team-acco__trigger">Ричард Джеймс</a>
+                            <div class="team-acco__content-wrap">
+                                <div class="team-acco__content">
+                                    <div class="team-acco__photo">
+                                        <img src="./img/photos/aphex.jpg" alt="" class="team-acco__photo-img">
                                     </div>
-                                    <div class="team-accordeon__text">
-                                        <div class="team-accordeon__title">Оператор</div>
-                                        <div class="team-accordeon__desc">
+                                    <div class="team-acco__text">
+                                        <div class="team-acco__title">Оператор</div>
+                                        <div class="team-acco__desc">
                                             <p>С радостью поможет подобрать идеальный
                                                 бургер и оформить заказ.</p>
                                         </div>
@@ -180,16 +185,16 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="team-accordeon__item">
-                            <a href="" class="team-accordeon__trigger">Джейк Финн</a>
-                            <div class="team-accordeon__content-wrap">
-                                <div class="team-accordeon__content">
-                                    <div class="team-accordeon__photo">
-                                        <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
+                        <li class="team-acco__item">
+                            <a href="" class="team-acco__trigger">Джейк Финн</a>
+                            <div class="team-acco__content-wrap">
+                                <div class="team-acco__content">
+                                    <div class="team-acco__photo">
+                                        <img src="./img/photos/aphex.jpg" alt="" class="team-acco__photo-img">
                                     </div>
-                                    <div class="team-accordeon__text">
-                                        <div class="team-accordeon__title">Оператор</div>
-                                        <div class="team-accordeon__desc">
+                                    <div class="team-acco__text">
+                                        <div class="team-acco__title">Оператор</div>
+                                        <div class="team-acco__desc">
                                             <p>С радостью поможет подобрать идеальный
                                                 бургер и оформить заказ.</p>
                                         </div>
@@ -198,16 +203,16 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="team-accordeon__item">
-                            <a href="" class="team-accordeon__trigger">Николай Иванов</a>
-                            <div class="team-accordeon__content-wrap">
-                                <div class="team-accordeon__content">
-                                    <div class="team-accordeon__photo">
-                                        <img src="./img/photos/aphex.jpg" alt="" class="team-accordeon__photo-img">
+                        <li class="team-acco__item">
+                            <a href="" class="team-acco__trigger">Николай Иванов</a>
+                            <div class="team-acco__content-wrap">
+                                <div class="team-acco__content">
+                                    <div class="team-acco__photo">
+                                        <img src="./img/photos/aphex.jpg" alt="" class="team-acco__photo-img">
                                     </div>
-                                    <div class="team-accordeon__text">
-                                        <div class="team-accordeon__title">Оператор</div>
-                                        <div class="team-accordeon__desc"><p>С радостью поможет подобрать
+                                    <div class="team-acco__text">
+                                        <div class="team-acco__title">Оператор</div>
+                                        <div class="team-acco__desc"><p>С радостью поможет подобрать
                                             идеальный бургер и оформить заказ.</p>
                                         </div>
                                     </div>
@@ -222,13 +227,13 @@
         <!--МЕНЮ-->
         <section class="section menu">
             <h2 class="menu__title section__title section__title--white">Меню</h2>
-            <ul class="menu-accordeon">
-                <li class="menu-accordeon__item menu-accordeon__item--active">
-                    <a class="menu-accordeon__trigger menu-accordeon__trigger-meat">
-                        <span class="menu-accordeon__title">Для мясоедов</span>
+            <ul class="menu-acco">
+                <li class="menu-acco__item menu-acco__item--active">
+                    <a class="menu-acco__trigger menu-acco__trigger-meat">
+                        <span class="menu-acco__title">Для мясоедов</span>
                     </a>
-                    <div class="menu-accordeon__content">
-                        <div class="menu-accordeon__text">
+                    <div class="menu-acco__content">
+                        <div class="menu-acco__text">
                             <p>Речевой акт редуцирует диалектический характер. Развивая эту тему,
                                 заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает
                                 диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
@@ -243,12 +248,12 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu-accordeon__item">
-                    <a class="menu-accordeon__trigger menu-accordeon__trigger-veg">
-                        <span class="menu-accordeon__title">Вегетарианское</span>
+                <li class="menu-acco__item">
+                    <a class="menu-acco__trigger menu-acco__trigger-veg">
+                        <span class="menu-acco__title">Вегетарианское</span>
                     </a>
-                    <div class="menu-accordeon__content">
-                        <div class="menu-accordeon__text">
+                    <div class="menu-acco__content">
+                        <div class="menu-acco__text">
                             <p>Речевой акт редуцирует диалектический характер. Развивая эту тему,
                                 заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает
                                 диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
@@ -263,12 +268,12 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu-accordeon__item">
-                    <a class="menu-accordeon__trigger menu-accordeon__trigger-diet">
-                        <span class="menu-accordeon__title">Диетическое</span>
+                <li class="menu-acco__item">
+                    <a class="menu-acco__trigger menu-acco__trigger-diet">
+                        <span class="menu-acco__title">Диетическое</span>
                     </a>
-                    <div class="menu-accordeon__content">
-                        <div class="menu-accordeon__text">
+                    <div class="menu-acco__content">
+                        <div class="menu-acco__text">
                             <p>Речевой акт редуцирует диалектический характер. Развивая эту тему,
                                 заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает
                                 диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако

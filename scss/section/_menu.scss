@@ -2,23 +2,31 @@
   background-image: url(../img/bg/bg-menu.jpg);
   background-color: #b5babd;
 
+  @include phone {
+    background-position-x: left;
+  }
+
   &__title {
     position: absolute;
     left: rem(94px);
     top: rem(112px);
+
+    @include tablet {
+      left: 5%;
+      top: 10%;
+    }
   }
 }
 
-.menu-accordeon {
+.menu-acco {
   top: 0;
   right: 0;
   bottom: 0;
   position: absolute;
   display: flex;
+  justify-content: flex-end;
 
   &__item {
-    min-width: 5%;
-    max-width: rem(700px);
     display: flex;
     justify-content: flex-end;
   }
@@ -40,7 +48,6 @@
     &-diet {
       background-image: url("../img/content/bg-diet.jpg");
     }
-
   }
 
   &__title {
@@ -54,6 +61,11 @@
     transition: all .1s ease;
     top: 90%;
     position: absolute;
+    width: rem(500px);
+
+    @include tablet{
+      top: 95%;
+    }
   }
 
   &__content {
@@ -62,41 +74,58 @@
     display: flex;
     background-color: rgba(47, 50, 52, 0.91);
     transition: width 1s;
+
+    justify-content: flex-end;
   }
 
   &__text {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: rem(14px);
+    //font-size: rem(14px);
     font-weight: 300;
     line-height: rem(24px);
     height: 100%;
     overflow: hidden;
     position: relative;
-
     padding-top: 12%;
     padding-left: 7%;
     padding-right: 7%;
   }
 }
 
-.menu-accordeon__item--active {
+.menu-acco__item--active {
 
-  .menu-accordeon__trigger {
+  .menu-acco {
+    @include phone {
+      display: flex;
 
+    }
+  }
+  .menu-acco__trigger {
     min-width: rem(80px);
+    @include phone {
+      display: flex;
+    }
   }
 
-  .menu-accordeon__title {
+  .menu-acco__title {
+
     color: $orange;
   }
-  .menu-accordeon__content {
+  .menu-acco__content {
 
     display: flex;
   }
 
-  .menu-accordeon__content {
-    width: 540px;
+  .menu-acco__content {
+    width: rem(540px);
+
+    @include tablet {
+      width: 100%;
     }
+    @include phone {
+      width: 0;
+    }
+  }
 }
 

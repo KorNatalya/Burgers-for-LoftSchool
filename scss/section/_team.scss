@@ -32,7 +32,7 @@
   }
 }
 
-.team-accordeon {
+.team-acco {
   margin-top: rem(55px);
 
   &__item {
@@ -125,7 +125,7 @@
   }
 }
 
-.team-accordeon__trigger:before {
+.team-acco__trigger:before {
   content: '';
   display: block;
   width: 0;
@@ -137,8 +137,8 @@
   transition: .5s;
 }
 
-.team-accordeon__item--active {
-  .team-accordeon__trigger {
+.team-acco__item--active {
+  .team-acco__trigger {
     color: $orange;
 
     &::before {
@@ -146,11 +146,11 @@
     }
   }
 
-  .team-accordeon__content {
+  .team-acco__content {
     display: flex;
   }
 
-  .team-accordeon__content-wrap {
+  .team-acco__content-wrap {
     height: auto;
   }
 }
