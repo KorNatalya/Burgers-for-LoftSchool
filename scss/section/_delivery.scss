@@ -4,6 +4,12 @@
   flex-direction: column;
   align-items: center;
 
+  h1 {
+    @include tablet {
+      margin-bottom: 5%;
+    }
+  }
+
   &__form {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;

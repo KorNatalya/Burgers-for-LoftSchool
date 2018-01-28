@@ -1,9 +1,10 @@
 .menu {
-  background-image: url(../img/bg/bg-menu.jpg);
+  background-image: url('../img/bg/bg-menu/bg-menu.jpg');
   background-color: #b5babd;
 
   @include phone {
-    background-position-x: left;
+    background-image: url('../img/bg/bg-menu/bg-menu-phone.jpg');
+    background-position: left;
   }
 
   &__title {
@@ -74,7 +75,6 @@
     display: flex;
     background-color: rgba(47, 50, 52, 0.91);
     transition: width 1s;
-
     justify-content: flex-end;
   }
 
@@ -98,11 +98,10 @@
   .menu-acco {
     @include phone {
       display: flex;
-
     }
   }
   .menu-acco__trigger {
-    min-width: rem(80px);
+   width: rem(80px);
     @include phone {
       display: flex;
     }
