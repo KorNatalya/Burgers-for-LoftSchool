@@ -104,7 +104,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    padding-top: 12%;
+    padding-top: rem(30px);
     padding-left: 7%;
     padding-right: 7%;
   }
@@ -129,11 +129,15 @@
 
     &__trigger {
       width: rem(80px);
+      @include tablet {
+        min-width: rem(80px);
+      }
+
       @include phone {
         z-index: 20;
-
         display: flex;
-        width: 20%;
+        min-width: rem(80px);
+        width: 15%;
       }
     }
 
@@ -156,9 +160,8 @@
         width: 100%;
       }
       @include phone {
-        width: 80%;
+        width: 85%;
         z-index: 20;
-
       }
     }
 
@@ -166,7 +169,8 @@
       @include phone {
         display: flex;
         z-index: 20;
-        margin-top: rem(-25px);
+        //margin-top: rem(-40px);
+        margin-bottom: rem(12px);
         justify-content: flex-end;
       }
     }
