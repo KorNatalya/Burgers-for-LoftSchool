@@ -19,6 +19,15 @@
   }
 }
 
+.menu-acco__x {
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
 .menu-acco {
   top: 0;
   right: 0;
@@ -26,6 +35,10 @@
   position: absolute;
   display: flex;
   justify-content: flex-end;
+
+  @include phone {
+    width: 100%;
+  }
 
   &__item {
     display: flex;
@@ -64,8 +77,12 @@
     position: absolute;
     width: rem(500px);
 
-    @include tablet{
-      top: 95%;
+    @include tablet {
+      top: 90%;
+    }
+
+    @include phone {
+      z-index: 10;
     }
   }
 
@@ -93,38 +110,83 @@
   }
 }
 
+//ACTIVE
+
 .menu-acco__item--active {
+  @include phone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   .menu-acco {
     @include phone {
       display: flex;
-    }
-  }
-  .menu-acco__trigger {
-   width: rem(80px);
-    @include phone {
-      display: flex;
-    }
-  }
-
-  .menu-acco__title {
-
-    color: $orange;
-  }
-  .menu-acco__content {
-
-    display: flex;
-  }
-
-  .menu-acco__content {
-    width: rem(540px);
-
-    @include tablet {
       width: 100%;
     }
-    @include phone {
-      width: 0;
+
+    &__trigger {
+      width: rem(80px);
+      @include phone {
+        z-index: 20;
+
+        display: flex;
+        width: 20%;
+      }
+    }
+
+    &__title {
+
+      color: $orange;
+      @include phone {
+        z-index: 20;
+        position: absolute;
+        top: 90%;
+        transform-origin: left top 0;
+      }
+    }
+
+    &__content {
+      display: flex;
+      width: rem(540px);
+
+      @include tablet {
+        width: 100%;
+      }
+      @include phone {
+        width: 80%;
+        z-index: 20;
+
+      }
+    }
+
+    &__x {
+      @include phone {
+        display: flex;
+        z-index: 20;
+        margin-top: rem(-25px);
+        justify-content: flex-end;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link {
+      display: inline-block;
+      width: rem(20px);
+      height: rem(20px);
+
+    }
+    &__img {
+      min-width: 100%;
+      max-height: 100%;
     }
   }
+
 }
 
