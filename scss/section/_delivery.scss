@@ -15,11 +15,11 @@
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: rem(14px);
     margin-top: rem(50px);
-    @include tablet{
+    @include tablet {
       margin: 0;
     }
-    @include phone{
-     margin: 0;
+    @include phone {
+      margin: 0;
     }
   }
 }
@@ -35,12 +35,12 @@
   &__left {
     width: 50%;
 
-    @include tablet{
+    @include tablet {
       width: 70%;
       margin: 0;
     }
 
-    @include phone{
+    @include phone {
       width: 100%;
     }
   }
@@ -48,11 +48,11 @@
     width: 50%;
     margin-left: rem(20px);
 
-    @include tablet{
+    @include tablet {
       width: 70%;
       margin: 0;
     }
-    @include phone{
+    @include phone {
       width: 100%;
     }
   }
@@ -72,12 +72,9 @@
     }
     span {
       margin-right: rem(20px);
-      @include phone{
+      @include phone {
         margin-right: rem(10px);
       }
-    }
-    button {
-      margin-right: rem(20px);
     }
   }
   &__reset {
@@ -105,53 +102,69 @@
   &__textarea {
     max-height: rem(115px);
     margin-top: rem(10px);
-    padding: 10px 20px;
+    padding: rem(10px) rem(20px);
     background-color: white;
     border: 1px solid #d1cfcb;
-    border-radius: 3px;
+    border-radius: rem(3px);
     width: 100%;
     font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
-    line-height: 24px;
+    line-height: rem(24px);
     color: $black;
   }
 
   &__radio, &__checkbox {
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: rem(10px);
     border: none;
-    }
+  }
+}
+
+.form__buttons {
+  margin-right: rem(20px);
+  display: flex;
 }
 
 //radio
+
+.form__block--radio {
+  display: block;
+  position: relative;
+  padding-left: rem(35px);
+  margin-bottom: rem(12px);
+  cursor: pointer;
+  font-size: rem(22px);
+  user-select: none;
+}
+
 .form__block--radio input {
   position: absolute;
-  z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 7px;
-}
-.form__text--radio {
-  position: relative;
-  padding: 0 0 0 30px;
   cursor: pointer;
-  display: inline-block;
-  margin-right: rem(21px) ;
 }
-.form__text--radio:before {
-  content: '';
+
+.radio {
   position: absolute;
-  top: -3rem(px);
-  left: 0;
-  width: rem(15px);
+  top: rem(4px);
+  left: rem(10px);
   height: rem(15px);
-  border: 0;
+  width: rem(15px);
+  background-color: #eee;
   border-radius: 50%;
-  background: #ffffff;
 }
-.form__text--radio:after {
-  content: '';
+
+.radio:after {
+  content: "";
   position: absolute;
+  opacity: 0;
+}
+
+.form__block--radio input:checked ~ .radio:after {
+  opacity: 1;
+}
+
+.form__block--radio .radio:after {
   top: rem(4px);
   left: rem(4px);
   width: rem(7px);
@@ -159,55 +172,54 @@
   border-radius: 50%;
   background: $salmon-red;
   transition: .3s;
-  opacity: 0;
-}
-.form__block--radio input:checked + .form__text--radio:after {
-  opacity: 1;
 }
 
 //checkbox
+
+.form__block--checkbox {
+  display: block;
+  position: relative;
+  padding-left: rem(35px);
+  margin-bottom: rem(12px);
+  cursor: pointer;
+  font-size: rem(22px);
+  user-select: none;
+}
+
 .form__block--checkbox input {
   position: absolute;
-  z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 7px;
-}
-.form__text--checkbox {
-  position: relative;
-  padding: 0 0 0 30px;
   cursor: pointer;
-  display: inline-block;
-  margin-right: rem(21px) ;
 }
-.form__text--checkbox:before {
-  content: '';
+
+.checkmark {
   position: absolute;
-  top: -3rem(px);
-  left: 0;
-  width: rem(15px);
+  top: rem(4px);
+  left: rem(10px);
   height: rem(15px);
-  border: 0;
-  background: #ffffff;
+  width: rem(15px);
+  background-color: #ffffff;
 }
-.form__text--checkbox:after {
-  //content: '';
-  //position: absolute;
-  //top: 0;
-  //left: rem(3px);
-  //background: url('../icons/flag.png') no-repeat 50%;
-  //background-size: contain;
-  //opacity: 0;
-  //
-  content: '\2713';
+
+.checkmark:after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: rem(2px);
-  transition: .3s;
   opacity: 0;
-  color: $salmon-red;
 }
-.form__block--checkbox input:checked + .form__text--checkbox:after {
+
+.form__block--checkbox input:checked ~ .checkmark:after {
   opacity: 1;
+}
+
+.form__block--checkbox .checkmark:after {
+  left: rem(5px);
+  top: rem(2px);
+  width: rem(3px);
+  height: rem(8px);
+  border: solid $salmon-red;
+  border-width: 0 rem(2px) rem(2px) 0;
+  transform: rotate(45deg);
+  transition: .3s;
 }
 
 

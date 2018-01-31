@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/normalize.css"/>
     <link rel="stylesheet" href="./css/main.css"/>
     <link rel="icon" href="./icons/favicon.svg" sizes="any" type="image/svg+xml">
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -454,9 +455,13 @@
                             </div>
                             <div class="form__row">
                                 <label class="form__block--radio">
-                                    <input type="radio" name="payment" value="cash" class="form__radio">
+                                    <input type="radio" name="payment" value="cash" class="form__radio"/>
+                                    <span class="radio"></span>
                                     <div class="form__text--radio">Потребуется сдача</div>
-                                    <input type="radio" name="payment" value="card" class="form__radio" checked>
+                                </label>
+                                <label class="form__block--radio">
+                                    <input type="radio" name="payment" value="card" class="form__radio" checked/>
+                                    <span class="radio"></span>
                                     <div class="form__text--radio">Оплата по карте</div>
                                 </label>
                             </div>
@@ -464,16 +469,17 @@
                                 <label class="form__block--checkbox">
                                     <input type="checkbox" name="call" value="donotcall" class="form__checkbox"
                                            checked>
+                                    <span class="checkmark"></span>
                                     <div class="form__text--checkbox">Не перезванивать</div>
                                 </label>
                             </div>
 
                             <div class="form__row">
-                                <label class="form__block">
-                                    <p>
-                                        <button class="button button_action_order" value="Order">Заказать</button>
-                                        <input type="reset" value="Очистить" class="form__reset">
-                                    </p>
+                                <label class="form__buttons">
+                                    <button class="button button_action_order" value="Order">Заказать</button>
+                                </label>
+                                <label class="form__buttons">
+                                    <input type="reset" value="Очистить" class="form__reset">
                                 </label>
                             </div>
                         </div>
@@ -565,5 +571,7 @@
 <!--</div>-->
 <!--</div>-->
 
+
 </body>
+
 </html>

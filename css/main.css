@@ -90,6 +90,9 @@ input {
 h1, h2, h3 {
   margin: 0; }
 
+input:focus, a:focus, button:focus {
+  outline: none; }
+
 .wrapper {
   position: relative;
   min-height: 100%;
@@ -1045,8 +1048,6 @@ h1, h2, h3 {
       @media screen and (max-width: 480px) {
         .form__block span {
           margin-right: 0.71429rem; } }
-    .form__block button {
-      margin-right: 1.42857rem; }
   .form__reset {
     color: white;
     background-color: transparent;
@@ -1068,48 +1069,62 @@ h1, h2, h3 {
   .form__textarea {
     max-height: 8.21429rem;
     margin-top: 0.71429rem;
-    padding: 10px 20px;
+    padding: 0.71429rem 1.42857rem;
     background-color: white;
     border: 1px solid #d1cfcb;
-    border-radius: 3px;
+    border-radius: 0.21429rem;
     width: 100%;
     font-family: Ubuntu, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 1.71429rem;
     color: #2f3234; }
   .form__radio, .form__checkbox {
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 0.71429rem;
     border: none; }
+
+.form__buttons {
+  margin-right: 1.42857rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__block--radio {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.85714rem;
+  cursor: pointer;
+  font-size: 1.57143rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .form__block--radio input {
   position: absolute;
-  z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 7px; }
+  cursor: pointer; }
 
-.form__text--radio {
-  position: relative;
-  padding: 0 0 0 30px;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 1.5rem; }
-
-.form__text--radio:before {
-  content: '';
+.radio {
   position: absolute;
-  top: -3rem px;
-  left: 0;
-  width: 1.07143rem;
+  top: 0.28571rem;
+  left: 0.71429rem;
   height: 1.07143rem;
-  border: 0;
-  border-radius: 50%;
-  background: #ffffff; }
+  width: 1.07143rem;
+  background-color: #eee;
+  border-radius: 50%; }
 
-.form__text--radio:after {
-  content: '';
+.radio:after {
+  content: "";
   position: absolute;
+  opacity: 0; }
+
+.form__block--radio input:checked ~ .radio:after {
+  opacity: 1; }
+
+.form__block--radio .radio:after {
   top: 0.28571rem;
   left: 0.28571rem;
   width: 0.5rem;
@@ -1118,48 +1133,54 @@ h1, h2, h3 {
   background: #e45028;
   -webkit-transition: .3s;
   -o-transition: .3s;
-  transition: .3s;
-  opacity: 0; }
+  transition: .3s; }
 
-.form__block--radio input:checked + .form__text--radio:after {
-  opacity: 1; }
+.form__block--checkbox {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.85714rem;
+  cursor: pointer;
+  font-size: 1.57143rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .form__block--checkbox input {
   position: absolute;
-  z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 7px; }
+  cursor: pointer; }
 
-.form__text--checkbox {
-  position: relative;
-  padding: 0 0 0 30px;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 1.5rem; }
-
-.form__text--checkbox:before {
-  content: '';
+.checkmark {
   position: absolute;
-  top: -3rem px;
-  left: 0;
-  width: 1.07143rem;
+  top: 0.28571rem;
+  left: 0.71429rem;
   height: 1.07143rem;
-  border: 0;
-  background: #ffffff; }
+  width: 1.07143rem;
+  background-color: #ffffff; }
 
-.form__text--checkbox:after {
-  content: '\2713';
+.checkmark:after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0.14286rem;
+  opacity: 0; }
+
+.form__block--checkbox input:checked ~ .checkmark:after {
+  opacity: 1; }
+
+.form__block--checkbox .checkmark:after {
+  left: 0.35714rem;
+  top: 0.14286rem;
+  width: 0.21429rem;
+  height: 0.57143rem;
+  border: solid #e45028;
+  border-width: 0 0.14286rem 0.14286rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   -webkit-transition: .3s;
   -o-transition: .3s;
-  transition: .3s;
-  opacity: 0;
-  color: #e45028; }
-
-.form__block--checkbox input:checked + .form__text--checkbox:after {
-  opacity: 1; }
+  transition: .3s; }
 
 .contacts {
   background-image: url("../img/content/map.png"); }
