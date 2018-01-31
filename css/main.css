@@ -1095,21 +1095,23 @@ input:focus, a:focus, button:focus {
   position: relative;
   padding-left: 2.5rem;
   margin-bottom: 0.85714rem;
+  margin-right: 20px;
   cursor: pointer;
-  font-size: 1.57143rem;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  margin-left: -0.71429rem; }
 
 .form__block--radio input {
   position: absolute;
-  opacity: 0;
+  display: none;
   cursor: pointer; }
 
 .radio {
   position: absolute;
-  top: 0.28571rem;
+  top: 0;
   left: 0.71429rem;
   height: 1.07143rem;
   width: 1.07143rem;
@@ -1141,11 +1143,12 @@ input:focus, a:focus, button:focus {
   padding-left: 2.5rem;
   margin-bottom: 0.85714rem;
   cursor: pointer;
-  font-size: 1.57143rem;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  margin-left: -0.71429rem; }
 
 .form__block--checkbox input {
   position: absolute;
@@ -1154,7 +1157,7 @@ input:focus, a:focus, button:focus {
 
 .checkmark {
   position: absolute;
-  top: 0.28571rem;
+  top: 0;
   left: 0.71429rem;
   height: 1.07143rem;
   width: 1.07143rem;
