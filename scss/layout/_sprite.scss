@@ -16,8 +16,6 @@
 .icon-best {
   min-width: 100%;
   max-height: 100%;
-  //display: flex;
-  //align-items: center;
   &__meat{
     fill: $salmon-red;
   }
@@ -28,5 +26,4 @@
   &__natural {
     fill: #8ac03e;
   }
-
 }

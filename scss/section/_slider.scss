@@ -1,0 +1,287 @@
+.slider {
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  &__arrow {
+    //border: 3px dotted #003d8b;
+    &--icon {
+      width: rem(27px);
+      height: rem(15px);
+      fill: white;
+      cursor: pointer;
+    }
+    &--left {
+      transform: rotate(90deg);
+    }
+    &--right {
+      transform: rotate(-90deg);
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    width: rem(940px);
+    min-height: rem(480px);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      justify-content: center;
+    }
+
+    @include phone {
+      width: 80%;
+    }
+  }
+
+  //ЛЕВАЯ ЧАСТЬ
+
+  &__burger {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: rem(10px);
+    }
+    @include phone {
+      width: 90%;
+      height: auto;
+      align-items: flex-end;
+    }
+
+    &--pic {
+      width: rem(460px);
+      height: rem(320px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tablet {
+        margin-top: rem(75px);
+        width: rem(405px);
+        height: rem(260px);
+      }
+      @include phone {
+        align-items: flex-end;
+        margin-bottom: rem(10px);
+      }
+    }
+
+    &--img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  //ПРАВАЯ ЧАСТЬ
+
+  &__descrip {
+    width: 50%;
+    margin-left: rem(20px);
+
+    @include tablet {
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+    @include phone {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      margin-top: rem(55px);
+      margin-bottom: rem(35px);
+      font-family: 'Ubuntu', Helvetica, sans-serif;
+      font-size: rem(14px);
+      color: white;
+      font-weight: 300;
+      line-height: rem(24px);
+
+      @include tablet {
+        margin-top: rem(36px);
+        margin-bottom: rem(26px);
+      }
+      @include phone {
+        margin-top: 5%;
+        margin-bottom: 3%;
+        font-size: rem(13px);
+        margin-left: -7%;
+        margin-right: -7%;
+      }
+    }
+    &--price {
+      font-family: 'Gagalin', Helvetica, sans-serif;
+      font-size: rem(30px);
+      font-weight: 400;
+      color: $salmon-red;
+      letter-spacing: rem(-0.75px);
+      display: inline-block;
+      margin-right: rem(30px);
+      max-width: rem(445px);
+      @include tablet {
+        margin-right: rem(10px);
+      }
+
+      span {
+        font-size: rem(72px);
+        letter-spacing: rem(-1.79px);
+
+        @include tablet {
+          font-size: rem(50px);
+        }
+      }
+    }
+  }
+}
+
+.section__title--closely {
+  font-weight: 400;
+  line-height: rem(64px);
+  @include tablet {
+    text-align: center;
+    margin-top: 0;
+  }
+  @include phone {
+    font-size: rem(50px);
+    line-height: rem(50px);
+  }
+}
+
+.compos {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &__btn {
+    width: rem(90px);
+    height: rem(90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f08c33;
+    border-radius: rem(3px);
+    cursor: pointer;
+
+    @include phone {
+      margin-left: rem(-40px);
+      margin-top: 1%;
+    }
+
+    &--icon {
+      width: rem(45px);
+      height: rem(45px);
+      fill: white;
+      margin-bottom: rem(11px);
+    }
+    &--title {
+      color: #ffffff;
+      font-family: 'Gagalin', Helvetica, sans-serif;
+      font-size: rem(14px);
+      font-weight: 400;
+    }
+  }
+
+  &__info {
+    opacity: 0;
+    border-radius: rem(3px);
+    width: rem(270px);
+    height: rem(332px);
+    background-color: rgba(255, 255, 255, 0.91);
+    padding: rem(10px) 0 rem(10px) 0;
+    transition: .3s;
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: #2f3234;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-size: rem(14px);
+
+    &--icon {
+      width: rem(43px);
+      height: rem(43px);
+
+      &--beef {
+        fill: #e25028;
+      }
+      &--buns {
+        fill: #f8b43a;
+      }
+      &--salad {
+        fill: #8ac03e;
+      }
+      &--sauce {
+        fill: #e25028;
+      }
+      &--cucumber {
+        fill: #8ac03e;
+      }
+      &--cheese {
+        fill: #f8b43a;
+      }
+    }
+    &--ingr {
+      font-weight: 500;
+    }
+    &--weight {
+      font-weight: 300;
+    }
+  }
+}
+
+.kkal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  @include tablet {
+    right: 0;
+    top: 0;
+    left: auto;
+    bottom: auto;
+  }
+  @include phone {
+    margin-right: rem(-40px);
+    margin-top: 1%;
+  }
+
+  &--icon {
+    width: rem(60px);
+    height: rem(60px);
+    fill: #ffffff;
+    opacity: 0.5;
+  }
+  &--info {
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: 'Gagalin', Helvetica, sans-serif;
+    font-size: rem(20px);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: rem(-40px);
+    margin-left: rem(3px);
+    text-align: center;
+    span {
+      font-size: rem(14px);
+    }
+  }
+}
