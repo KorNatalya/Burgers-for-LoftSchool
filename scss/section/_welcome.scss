@@ -18,7 +18,19 @@
 /* HEADER */
 .nav {
   display: flex;
+  //border: 2px solid #dbc900;
   align-items: center;
+
+  @include tablet() {
+    //ПОЛНОЭКРАННОЕ МЕНЮ
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    //border: 3px solid #9f1900;
+  }
 
   &__item {
     &:after {
@@ -31,13 +43,37 @@
     &:last-child:after {
       display: none;
     }
+    @include tablet {
+      //border: 2px solid #8b0100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:after {
+        display: block;
+        text-align: center;
+        content: ' ';
+        @include circle(rem(6px), #ffffff);
+        margin: rem(28px) 0;
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
   }
 
   &__list {
     display: flex;
-
-    @include tablet() {
-      display: none;
+    @include tablet {
+      //border: 3px dotted #f1ff00;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(48, 51, 53, 0.96);
     }
   }
 
@@ -49,9 +85,12 @@
     line-height: rem(30px);
     text-transform: uppercase;
   }
-  &__btn {
-    margin-left: rem(15px);
-  }
+}
+
+.nav-btn {
+  margin-left: rem(15px);
+  display: flex;
+  align-items: center;
 }
 
 .hamb-menu {
@@ -63,7 +102,7 @@
   }
   &__img {
     max-width: 100%;
-    min-height: 100%;
+    //min-height: 100%;
   }
   @media screen and (min-width: 769px) {
     display: none;
@@ -77,12 +116,48 @@
   display: block;
   width: rem(92px);
   height: rem(69px);
+  z-index: 1;
 
   &__img {
     max-width: 100%;
     min-height: 100%;
   }
 }
+
+//ПРИ ОТКРЫТИИ ПОЛНОЭКРАННОГО МЕНЮ//////////////
+.welcome__content, .hamb-menu, .nav-btn, .arrow {
+  @include tablet {
+    display: none;
+  }
+}
+
+.container {
+  @include tablet {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: rem(12px) rem(19px);
+  }
+}
+
+.section {
+  @include tablet {
+    position: relative;
+  }
+}
+
+.nav-x {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: rem(31px) rem(19px);
+  }
+}
+
+///////////////////////////////////////////
 
 .welcome-content {
   display: flex;
