@@ -1,12 +1,25 @@
 .slider {
   background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
   display: flex;
-  flex-direction: row;
+  //flex-direction: row;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: rem(1100px);
+
+    @include tablet{
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
   &__arrow {
-    //border: 3px dotted #003d8b;
     &--icon {
       width: rem(27px);
       height: rem(15px);
@@ -18,13 +31,16 @@
     }
     &--right {
       transform: rotate(-90deg);
+
     }
   }
   &__content {
     display: flex;
-    justify-content: space-around;
-    width: rem(940px);
+    max-width: rem(940px);
+    width: 90%;
+    //width: ;
     min-height: rem(480px);
+    overflow: hidden;
 
     @include tablet {
       flex-direction: column;
@@ -34,7 +50,49 @@
     }
 
     @include phone {
-      width: 80%;
+      width: 90%;
+    }
+  }
+
+  &__items{
+    display: flex;
+    position: relative;
+    will-change: right;
+    transition: right 0.3s;
+
+    //border: 3px dotted #003d8b;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: space-around;
+    //width: rem(940px);
+    //min-height: rem(480px);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+
+  &__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    //width: rem(940px);
+    width: 100%;
+    min-height: rem(480px);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      //width: 80%;
+      justify-content: center;
+    }
+
+    @include phone {
+      //width: 80%;
     }
   }
 
@@ -104,17 +162,20 @@
       color: white;
       font-weight: 300;
       line-height: rem(24px);
+      max-width: 450px;
 
       @include tablet {
-        margin-top: rem(36px);
-        margin-bottom: rem(26px);
+        //margin-top: rem(36px);
+        //margin-bottom: rem(26px);
+        margin: rem(36px) auto rem(26px) auto;
+        max-width: 440px;
       }
       @include phone {
         margin-top: 5%;
         margin-bottom: 3%;
         font-size: rem(13px);
-        margin-left: -7%;
-        margin-right: -7%;
+        //margin-left: -7%;
+        //margin-right: -7%;
       }
     }
     &--price {
@@ -155,6 +216,12 @@
   }
 }
 
+.compos:hover .compos__info {
+  //transform: scale(1);
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
 .compos {
   display: flex;
   position: absolute;
@@ -173,7 +240,6 @@
     cursor: pointer;
 
     @include phone {
-      margin-left: rem(-40px);
       margin-top: 1%;
     }
 
@@ -190,6 +256,7 @@
       font-weight: 400;
     }
   }
+
 
   &__info {
     opacity: 0;
@@ -260,7 +327,6 @@
     bottom: auto;
   }
   @include phone {
-    margin-right: rem(-40px);
     margin-top: 1%;
   }
 

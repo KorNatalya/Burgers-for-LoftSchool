@@ -4,7 +4,7 @@
   &__header {
     display: flex;
     padding-top: rem(10px);
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   &__content {
     position: absolute;
@@ -14,22 +14,69 @@
     width: 100%;
   }
 }
+//ПРИ ОТКРЫТИИ ПОЛНОЭКРАННОГО МЕНЮ//////////////
+
+.container--tab {
+  @include tablet {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: rem(12px) rem(19px);
+  }
+}
+
+.section--tab {
+  @include tablet {
+    position: relative;
+  }
+}
+
+.nav-x {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: rem(31px) rem(19px);
+    z-index: 4;
+  }
+}
+
+///////////////////////////////////////////
 
 /* HEADER */
-.nav {
-  display: flex;
-  //border: 2px solid #dbc900;
-  align-items: center;
-
+.nav--tab{
   @include tablet() {
     //ПОЛНОЭКРАННОЕ МЕНЮ
     display: flex;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: -100%;
     top: 0;
-    //border: 3px solid #9f1900;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  @include tablet{
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    @include tablet {
+      min-width: 100%;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(48, 51, 53, 0.98);
+      z-index: 2;
+    }
   }
 
   &__item {
@@ -38,13 +85,12 @@
       vertical-align: middle;
       content: ' ';
       @include circle(rem(5px), #ffffff);
-      margin: 0 rem(12px);
+
     }
     &:last-child:after {
       display: none;
     }
     @include tablet {
-      //border: 2px solid #8b0100;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -63,20 +109,6 @@
     }
   }
 
-  &__list {
-    display: flex;
-    @include tablet {
-      //border: 3px dotted #f1ff00;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(48, 51, 53, 0.96);
-    }
-  }
-
   &__link {
     font-family: 'Ubuntu', Helvetica, sans-serif;
     color: #ffffff;
@@ -84,6 +116,7 @@
     font-weight: 400;
     line-height: rem(30px);
     text-transform: uppercase;
+    margin: 0 rem(12px);
   }
 }
 
@@ -99,6 +132,7 @@
   &__link {
     width: rem(25px);
     height: rem(25px);
+    display: block;
   }
   &__img {
     max-width: 100%;
@@ -116,48 +150,18 @@
   display: block;
   width: rem(92px);
   height: rem(69px);
-  z-index: 1;
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  @include tablet{
+    margin-left: 5%;
+  }
 
   &__img {
     max-width: 100%;
     min-height: 100%;
   }
 }
-
-//ПРИ ОТКРЫТИИ ПОЛНОЭКРАННОГО МЕНЮ//////////////
-.welcome__content, .hamb-menu, .nav-btn, .arrow {
-  @include tablet {
-    display: none;
-  }
-}
-
-.container {
-  @include tablet {
-    min-width: 100%;
-    height: 100%;
-    position: absolute;
-    padding: rem(12px) rem(19px);
-  }
-}
-
-.section {
-  @include tablet {
-    position: relative;
-  }
-}
-
-.nav-x {
-  display: none;
-  @include tablet {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: rem(31px) rem(19px);
-  }
-}
-
-///////////////////////////////////////////
 
 .welcome-content {
   display: flex;
