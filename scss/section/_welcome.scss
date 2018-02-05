@@ -5,6 +5,10 @@
     display: flex;
     padding-top: rem(10px);
     justify-content: flex-end;
+    height: 80px;
+    @include tablet{
+      height: 40px;
+    }
   }
   &__content {
     position: absolute;
@@ -21,7 +25,7 @@
     min-width: 100%;
     height: 100%;
     position: absolute;
-    padding: rem(12px) rem(19px);
+    //padding: rem(12px) rem(19px);
   }
 }
 
@@ -63,14 +67,15 @@
   @include tablet{
     justify-content: center;
     min-width: 100%;
-    min-height: 100%;
+    height: 100%;
+    align-items: center;
   }
 
   &__list {
     display: flex;
     @include tablet {
       min-width: 100%;
-      min-height: 100vh;
+      min-height: 100%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -124,10 +129,13 @@
   margin-left: rem(15px);
   display: flex;
   align-items: center;
+  @include tablet{
+    margin-top: rem(40px);
+  }
 }
 
 .hamb-menu {
-  margin: 0 rem(15px) 0 rem(30px);
+  margin: rem(25px) rem(20px) 0 rem(30px);
 
   &__link {
     width: rem(25px);
@@ -154,7 +162,7 @@
   position: absolute;
   left: 0;
   @include tablet{
-    margin-left: 5%;
+    margin: rem(12px) rem(19px);
   }
 
   &__img {
