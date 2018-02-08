@@ -997,9 +997,11 @@ input:focus, a:focus, button:focus {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; } }
-  @media screen and (max-width: 768px) {
-    .team__content {
-      min-width: 100%; } }
+  .team__content {
+    height: 400px; }
+    @media screen and (max-width: 768px) {
+      .team__content {
+        min-width: 100%; } }
 
 .team-acco {
   margin-top: 3.92857rem; }
@@ -1009,10 +1011,9 @@ input:focus, a:focus, button:focus {
       margin: 4.28571rem auto 0 auto; } }
   @media screen and (max-width: 480px) {
     .team-acco {
-      margin-top: 7.14286rem; } }
+      margin-top: 2.85714rem; } }
   .team-acco__item {
-    margin-bottom: 2.5rem;
-    position: relative; }
+    margin-bottom: 2.5rem; }
   .team-acco__trigger {
     color: #ffffff;
     font-family: Gagalin, Helvetica, sans-serif;
@@ -1062,7 +1063,8 @@ input:focus, a:focus, button:focus {
         min-width: 50%; } }
     @media screen and (max-width: 480px) {
       .team-acco__content {
-        min-width: 75%; } }
+        min-width: 75%;
+        height: 13.92857rem; } }
   .team-acco__photo {
     width: 7.14286rem;
     height: 7.14286rem;
@@ -1122,11 +1124,11 @@ input:focus, a:focus, button:focus {
   display: flex; }
 
 .team-acco__item--active .team-acco__content-wrap {
-  height: 9.28571rem; }
+  height: 8.57143rem; }
   @media screen and (max-width: 768px) {
     .team-acco__item--active .team-acco__content-wrap {
-      height: 14.28571rem;
-      margin-bottom: 2.14286rem; } }
+      height: 15rem;
+      margin-bottom: 1.42857rem; } }
 
 /*ОТЗЫВЫ*/
 .reviews {
@@ -1345,9 +1347,9 @@ input:focus, a:focus, button:focus {
     display: -ms-flexbox;
     display: flex;
     background-color: rgba(47, 50, 52, 0.91);
-    -webkit-transition: width 1s;
-    -o-transition: width 1s;
-    transition: width 1s;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
@@ -1436,7 +1438,7 @@ input:focus, a:focus, button:focus {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.menu-acco__item--active .menu-acco__link {
+.menu-acco__item--active .menu-acco__pic {
   display: inline-block;
   width: 1.42857rem;
   height: 1.42857rem; }
@@ -1587,10 +1589,10 @@ input:focus, a:focus, button:focus {
   position: absolute;
   top: 0;
   left: 0.71429rem;
-  height: 1.07143rem;
   width: 1.07143rem;
-  background-color: #eee;
-  border-radius: 50%; }
+  height: 1.07143rem;
+  border-radius: 0.53571rem;
+  background-color: #ffffff; }
 
 .radio:after {
   content: "";
@@ -1605,8 +1607,8 @@ input:focus, a:focus, button:focus {
   left: 0.28571rem;
   width: 0.5rem;
   height: 0.5rem;
-  border-radius: 50%;
-  background: #e45028;
+  border-radius: 0.25rem;
+  background-color: #e45028;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s; }

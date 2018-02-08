@@ -66,6 +66,7 @@
 
   &__title {
     color: #ffffff;
+
     font-family: Gagalin, Helvetica, sans-serif;
     font-size: rem(40px);
     font-weight: 400;
@@ -91,7 +92,7 @@
     overflow: hidden;
     display: flex;
     background-color: rgba(47, 50, 52, 0.91);
-    transition: width 1s;
+    transition:  .3s ease-in-out;
     justify-content: flex-end;
   }
 
@@ -180,7 +181,7 @@
       flex-direction: column;
     }
 
-    &__link {
+    &__pic {
       display: inline-block;
       width: rem(20px);
       height: rem(20px);

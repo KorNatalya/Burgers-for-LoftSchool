@@ -152,10 +152,7 @@
   position: absolute;
   top: 0;
   left: rem(10px);
-  height: rem(15px);
-  width: rem(15px);
-  background-color: #eee;
-  border-radius: 50%;
+  @include circle(rem(15px), #ffffff);
 }
 
 .radio:after {
@@ -171,10 +168,7 @@
 .form__block--radio .radio:after {
   top: rem(4px);
   left: rem(4px);
-  width: rem(7px);
-  height: rem(7px);
-  border-radius: 50%;
-  background: $salmon-red;
+  @include circle(rem(7px), $salmon-red);
   transition: .2s;
 }
 
