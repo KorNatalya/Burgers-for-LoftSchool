@@ -57,6 +57,23 @@ hide.addEventListener('click', function () {
 
 // АККОРДЕОН Вертикальный
 
+// const teamActive = 'team-acco__item--active';
+// let team = 'team-acco__item';
+// let accoTrigs = document.querySelectorAll('.team-acco__trigger');
+//
+// // console.log(accoTrigs);
+//
+// for (let accoTrig of accoTrigs) {
+//     accoTrig.addEventListener('click', function (event) {
+//         if (team === event.target.parentNode.className) {
+//             event.target.parentNode.classList = teamActive;
+//         }
+//         else {
+//             event.target.parentNode.classList = team;
+//         }
+//     });
+// }
+
 
 $(function(){
     $('.team-acco__trigger').on('click', function(e){
