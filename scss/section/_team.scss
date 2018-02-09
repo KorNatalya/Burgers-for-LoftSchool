@@ -62,6 +62,7 @@
 
     @include tablet {
       justify-content: center;
+      font-size: rem(25px);
     }
   }
 
@@ -106,6 +107,8 @@
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
     margin-left: rem(21px);
     width: rem(220px);
     @include tablet {
@@ -125,9 +128,6 @@
   }
 
   &__desc {
-    //    display: flex;
-    //    align-items: center;
-    //justify-content: center;
     font-weight: 300;
     line-height: rem(24px);
     max-width: rem(330px);
