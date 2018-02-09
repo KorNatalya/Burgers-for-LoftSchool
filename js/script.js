@@ -199,7 +199,7 @@ $(document).ready(function () {
     }
 
 
-    fetch('./../json/reviews.json')
+    fetch(location.href+'/json/reviews.json')
         .then(function (response) {
             return response.json();
         })
