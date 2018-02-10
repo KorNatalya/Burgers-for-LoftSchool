@@ -36,14 +36,17 @@
   }
 }
 
+
 .team-acco {
-  margin-top: rem(55px);
-  @include tablet {
-    max-width: rem(330px);
-    margin: rem(60px) auto 0 auto;
-  }
-  @include phone {
-    margin-top: rem(40px);
+  &__list {
+    margin-top: rem(55px);
+    @include tablet {
+      max-width: rem(330px);
+      margin: rem(60px) auto 0 auto;
+    }
+    @include phone {
+      margin-top: rem(40px);
+    }
   }
 
   &__item {

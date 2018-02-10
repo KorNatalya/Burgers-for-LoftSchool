@@ -19,6 +19,7 @@
   }
 }
 
+
 .menu-acco__x {
   @media screen and (min-width: 769px) {
     display: none;
@@ -29,15 +30,18 @@
 }
 
 .menu-acco {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
 
-  @include phone {
-    width: 100%;
+  &__list {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+
+    @include phone {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -76,7 +80,7 @@
     transition: all .1s ease;
     top: 90%;
     position: absolute;
-    width: rem(500px);
+    width: rem(360px);
 
     @include tablet {
       top: 90%;
@@ -100,6 +104,7 @@
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
     //font-size: rem(14px);
+    min-width: rem(540px);
     font-weight: 300;
     line-height: rem(24px);
     height: 100%;
