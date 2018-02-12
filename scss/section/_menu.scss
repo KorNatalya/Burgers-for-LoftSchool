@@ -17,8 +17,17 @@
       top: 10%;
     }
   }
-}
 
+  p {
+    min-width: rem(350px);
+    @include tablet{
+      min-width: rem(300px);
+    }
+    @include phone{
+      min-width: rem(280px);
+    }
+  }
+}
 
 .menu-acco__x {
   @media screen and (min-width: 769px) {
@@ -103,8 +112,7 @@
   &__text {
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
-    //font-size: rem(14px);
-    min-width: rem(540px);
+    width: rem(540px);
     font-weight: 300;
     line-height: rem(24px);
     height: 100%;
@@ -113,8 +121,12 @@
     padding-top: rem(30px);
     padding-left: 7%;
     padding-right: 7%;
+    @include tablet{
+      width: 100%;
+    }
   }
 }
+
 
 //ACTIVE
 
@@ -197,6 +209,5 @@
       max-height: 100%;
     }
   }
-
 }
 

@@ -38,7 +38,7 @@
   background-size: cover;
   position: relative;
 
-  @include phone{
+  @include phone {
     min-width: rem(320px);
   }
 
@@ -89,7 +89,7 @@
   transition: .5s;
   display: inline-block;
 
-  @include tablet{
+  @include tablet {
     padding: rem(12px) rem(15px);
     font-size: rem(12px);
   }

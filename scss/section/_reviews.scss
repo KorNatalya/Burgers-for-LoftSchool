@@ -127,14 +127,11 @@
   }
 }
 
-////////////
 // Модальное окно
-
 .modal_form {
   width: rem(470px);
   height: rem(255px);
   border-radius: rem(3px);
-  //border: 3px #000 solid;
   background: #fff;
   position: fixed;
   top: 45%;
@@ -144,7 +141,7 @@
   display: none;
   opacity: 0;
   z-index: 10;
-  padding: rem(30px) rem(20px);
+  padding: rem(20px) rem(15px);
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-size: rem(14px);
   line-height: rem(24px);
@@ -161,7 +158,6 @@
 }
 
 // Кнoпкa Зaкрыть
-
 .modal_form .modal_close {
   width: rem(15px);
   height: rem(15px);
@@ -176,7 +172,7 @@
 // Пoдлoжкa
 
 #overlay {
-  z-index: 3;
+  z-index: 9;
   position: fixed;
   background-color: $black;
   opacity: 0.9;

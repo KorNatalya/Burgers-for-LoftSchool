@@ -54,37 +54,71 @@ let jsonReviews = {
 
 // SLIDER
 
-// const left = document.querySelector("#left"),
-//       right = document.querySelector("#right"),
-//       items = document.querySelector("#items");
-//
-// const minRight = 0,
-//       // maxRight = 4700,
-//     maxRight = 1880, //Изменить при добавлении слайдов
-//       step = 940;//Изменить при добавлении слайдов на 940
-//
-// let currentRight = 0;
-//
-// right.addEventListener("click", function() {
-//     if (currentRight < maxRight) {
-//         currentRight += step;
-//         items.style.right = currentRight + "px";
-//     }
-// });
-//
-// left.addEventListener("click", function() {
-//     if (currentRight > minRight) {
-//         currentRight -= step;
-//         items.style.right = currentRight + "px";
-//     }
-// });
 
-////////////////
+let left = document.querySelector(".slider__arrow--prev");
+let right = document.querySelector(".slider__arrow--next");
+let list = document.querySelector(".slider__list");
 
+let minRight = 0;
+let maxRight = 3760;
+let step = 940;
+let currentRight = 0;
+
+right.addEventListener('click', function () {
+    event.preventDefault();
+    if (currentRight < maxRight) {
+        currentRight += step;
+        list.style.right = currentRight + "px";
+    }
+});
+
+left.addEventListener('click', function () {
+    event.preventDefault();
+    if (currentRight > minRight) {
+        currentRight -= step;
+        list.style.right = currentRight + "px";
+    }
+});
+
+
+//
+
+// (function () {
+//     let slider = document.querySelector('.slider');
+//     let sliderList = document.querySelector('.slider__list');
+//     let arrows = document.querySelector('.slider__arrow');
+//     let activeItem = null;
+//     let step = 100;
+//     let itemPos = 0;
+//
+//     arrows.addEventListener('click', (event)=>{
+//         event.preventDefault();
+//         activeItem = slider.querySelector('.active');
+//         console.log(activeItem);
+//         if (event.target.classList.contains('.slider__arrow--next')){
+//             if (activeItem.nextElementSibling) {
+//                 slideTo('next');
+//             }
+//         } else {
+//             if (activeItem.previousElementSibling) {
+//                 slideTo('prev');
+//             }
+//         }
+//     });
+//     function slideTo(vector) {
+//         if(vector === "next"){
+//             itemPos += step;
+//             activeItem.nextElementSibling.classList.add('active');
+//         } else {
+//             itemPos -= step;
+//             activeItem.previousElementSibling.classList.add('active');
+//         }
+//         sliderList.style.trnsform = 'translateX(${-itemPos}%)';
+//         activeItem.classList.remove('active');
+//     }
+// })();
 
 // АККОРДЕОН Вертикальный
-
-
 (function () {
     const teamAccoList = document.querySelector('.team-acco__list');
     teamAccoList.addEventListener('click', (event) => {
@@ -112,155 +146,59 @@ let jsonReviews = {
     });
 })();
 
-// $('.team-acco__trigger').on('click', function (e) {
-//     let $this = $(this);
-//     let containerT = $this.closest('.team-acco');
-//     let itemT = $this.closest('.team-acco__item');
-//     let itemsT = containerT.find('.team-acco__item');
-//     let activeItemT = itemsT.filter('.team-acco__item--active');
-//     let contentT = itemT.find('.team-acco__content');
-//     let activeContentT = activeItemT.find('.team-acco__content');
-//     e.preventDefault();
-//
-//     if (itemT.hasClass('team-acco__item--active')) {
-//         itemT.removeClass('team-acco__item--active');
-//         contentT.animate({
-//             'height': '0px'
-//         });
-//     } else {
-//         itemsT.removeClass('team-acco__item--active');
-//         itemT.addClass('team-acco__item--active');
-//         activeContentT.animate({
-//             'height': '0px'
-//         });
-//         contentT.animate({
-//             'height': '190px'
-//         });
-//     }
-// });
-//
-// $('.section .team').on('click', function (e) {
-//     let target = $(e.target);
-//     if (!target.closest('.team').length) {
-//         $('.contentT').animate({
-//             'height': '0px'
-//         }, 2000);
-//         $('.itemT').removeClass('team-acco__item--active');
-//     }
-// });
-//
-// $('.team').on('click', function (e) {
-//     let $this = $(e.target);
-//     if (!$this.closest('.menu-acco__item--active').length) {
-//         $('.contentT').animate({
-//             'width': '0px'
-//         });
-//         $('.itemT').removeClass('menu-acco__item--active');
-//     }
-// });
 
 // АККОРДЕОН горизонтальный
-// (function () {
-//     const menuAccoList = document.querySelector('.menu-acco__list');
-//     menuAccoList.addEventListener('click', (event) => {
-//         console.log(event.target);
-//         if (event.target.classList.contains('menu-acco__trigger')) {
-//             const _this = event.target;
-//             const item = _this.parentNode;
-//             const list = item.parentNode;
-//             const items = list.children;
-//             const content = _this.nextElementSibling;
-//             event.preventDefault();
-//
-//             if (!item.classList.contains('menu-acco__item--active')) {
-//                 for (let i = 0; i < items.length; i++) {
-//                     items[i].classList.remove('menu-acco__item--active');
-//
-//                 }
-//                 item.classList.add('menu-acco__item--active');
-//
-//             } else {
-//                 item.classList.remove('menu-acco__item--active');
-//
-//             }
-//         }
-//     })
-// })();
-
 $(document).ready(function () {
 
-$('.menu-acco__trigger').on('click', function (e) {
-    let $this = $(this);
-    let containerM = $this.closest('.menu-acco__list');
-    let itemM = $this.closest('.menu-acco__item');
-    let itemsM = containerM.find('.menu-acco__item');
-    let activeItemM = itemsM.filter('.menu-acco__item--active');
-    let contentM = itemM.find('.menu-acco__content');
-    let activeContentM = activeItemM.find('.menu-acco__content');
-    let contentMWidth = contentM.clientWidth;
-    console.log('clientWidth');
+    var menuTrigger = function (e) {
+        let $this = $(this);
+        let containerM = $this.closest('.menu-acco__list');
+        let itemM = $this.closest('.menu-acco__item');
+        let itemsM = containerM.find('.menu-acco__item');
+        let activeItemM = itemsM.filter('.menu-acco__item--active');
+        let contentM = itemM.find('.menu-acco__content');
+        let activeContentM = activeItemM.find('.menu-acco__content');
+        e.preventDefault();
 
-    e.preventDefault();
+        if (itemM.hasClass('menu-acco__item--active')) {
+            itemM.removeClass('menu-acco__item--active');
+            contentM.slideUp('3000');
+        } else {
+            itemsM.removeClass('menu-acco__item--active');
+            itemM.addClass('menu-acco__item--active');
+            activeContentM.slideDown('3000');
+            contentM.slideDown('3000');
+        }
+    };
 
-    if (itemM.hasClass('menu-acco__item--active')) {
-        itemM.removeClass('menu-acco__item--active');
-        contentM.slideUp('3000');
-    } else {
-        itemsM.removeClass('menu-acco__item--active');
-        itemM.addClass('menu-acco__item--active');
-        activeContentM.slideDown('3000');
-        contentM.slideDown('3000');
-    }
-});
-
-$('.section .menu').on('click', function (e) {
-    let target = $(e.target);
-    if (!target.closest('.team').length) {
-        $('.contentM').animate({
-            'width': '0px'
-        }, 2000);
-        $('.itemM').removeClass('menu-acco__item--active');
-    }
-});
-
-$('.team .compos__X').on('click', function (e) {
-    let $this = $(e.target);
-    if (!$this.closest('.menu-acco__item--active').length) {
-        $('.contentM').animate({
-            'height': '0px'
-        });
-        $('.itemM').removeClass('menu-acco__item--active');
-    }
-});
-
-//////
+    $('.menu-acco__trigger').on('click', menuTrigger);
+    $('.menu-acco__img').on('click', menuTrigger);
 
 
-    // ПОЛНОЭКРАННОЕ МЕНЮ
-
+// ПОЛНОЭКРАННОЕ МЕНЮ
     const fullPageNav = document.querySelector('#navTab');
-    const maxLeft = 0;
+    const maxTop = 0;
     const step = 100;
 
-    let currentLeft = -100;
+    let currentTop = -100;
 
 
     $('#openMenu').on('click', function () {
-        if (currentLeft < maxLeft) {
-            currentLeft += step;
-            fullPageNav.style.left = currentLeft + '%';
+        if (currentTop < maxTop) {
+            currentTop += step;
+            fullPageNav.style.top = currentTop + '%';
         }
     });
 
     $('#hide').on('click', function () {
-        if (currentLeft >= maxLeft) {
-            currentLeft -= step;
-            fullPageNav.style.left = currentLeft + '%';
+        if (currentTop >= maxTop) {
+            currentTop -= step;
+            fullPageNav.style.top = currentTop + '%';
         }
     });
 
-    //REWIEWS
 
+// ОТЗЫВЫ
     $(jsonReviews.reviews).each(function (index, value) {
         render(value);
     });

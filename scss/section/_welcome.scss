@@ -3,12 +3,8 @@
   background-color: black;
   &__header {
     display: flex;
-    padding-top: rem(10px);
-    justify-content: flex-end;
-    height: 80px;
-    @include tablet{
-      height: 40px;
-    }
+    justify-content: space-between;
+    align-items: center;
   }
   &__content {
     position: absolute;
@@ -19,13 +15,11 @@
   }
 }
 //ПРИ ОТКРЫТИИ ПОЛНОЭКРАННОГО МЕНЮ//////////////
-
 .container--tab {
   @include tablet {
     min-width: 100%;
     height: 100%;
     position: absolute;
-    //padding: rem(12px) rem(19px);
   }
 }
 
@@ -42,27 +36,35 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin: rem(31px) rem(19px);
+    margin: rem(32px) rem(20px);
     z-index: 4;
   }
 }
 
-///////////////////////////////////////////
-
 /* HEADER */
+
+.nav-wrap{
+display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav--tab{
   @include tablet() {
     //ПОЛНОЭКРАННОЕ МЕНЮ
     display: flex;
     position: absolute;
-    left: -100%;
-    top: 0;
+    top: -100%;
+    left: 0;
   }
 }
+
 
 .nav {
   display: flex;
   align-items: center;
+  transition: .4s ease-in-out;
 
   @include tablet{
     justify-content: center;
@@ -90,7 +92,6 @@
       vertical-align: middle;
       content: ' ';
       @include circle(rem(5px), #ffffff);
-
     }
     &:last-child:after {
       display: none;
@@ -118,10 +119,15 @@
     font-family: 'Ubuntu', Helvetica, sans-serif;
     color: #ffffff;
     font-size: rem(13px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: rem(30px);
     text-transform: uppercase;
     margin: 0 rem(12px);
+    @include tablet{
+      font-size: rem(24px);
+      font-weight: 400;
+
+    }
   }
 }
 
@@ -129,22 +135,19 @@
   margin-left: rem(15px);
   display: flex;
   align-items: center;
-  @include tablet{
-    margin-top: rem(40px);
-  }
 }
 
 .hamb-menu {
-  margin: rem(25px) rem(20px) 0 rem(30px);
+  margin: 0 rem(20px) 0 rem(30px);
 
   &__link {
-    width: rem(25px);
-    height: rem(25px);
+    width: rem(24px);
+    height: rem(22px);
     display: block;
   }
   &__img {
     max-width: 100%;
-    //min-height: 100%;
+    min-height: 100%;
   }
   @media screen and (min-width: 769px) {
     display: none;
@@ -156,11 +159,10 @@
 
 .logo {
   display: block;
+  margin-top: rem(12px);
   width: rem(92px);
   height: rem(69px);
   z-index: 4;
-  position: absolute;
-  left: 0;
   @include tablet{
     margin: rem(12px) rem(19px);
   }

@@ -25,17 +25,12 @@
   }
 
   &__content {
-    height: 400px;
+    height: rem(480px);
     @include tablet {
       min-width: 100%;
-      //height: rem(520px);
     }
-    //@include phone {
-    //  height: rem(475px);
-    //}
   }
 }
-
 
 .team-acco {
   &__list {
@@ -62,6 +57,7 @@
     margin-bottom: rem(15px);
     display: flex;
     transition: all .1s ease;
+    line-height: 1;
 
     @include tablet {
       justify-content: center;
@@ -72,6 +68,7 @@
   &__content-wrap {
     height: 0;
     overflow: hidden;
+    transition: 0.3s ease-in-out;
     @include tablet {
       display: flex;
       align-items: center;
