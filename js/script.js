@@ -51,21 +51,25 @@ let jsonReviews = {
     ]
 };
 
-
 // SLIDER
-
-
 let left = document.querySelector(".slider__arrow--prev");
 let right = document.querySelector(".slider__arrow--next");
 let list = document.querySelector(".slider__list");
 
 let minRight = 0;
-let maxRight = 3760;
-let step = 940;
+let maxRight = 0;
+let lis = $("li.slider__item");
+let step = lis.width(); //940;
 let currentRight = 0;
+
+lis.each(function () {
+    maxRight += step;
+});
+maxRight -= step;
 
 right.addEventListener('click', function () {
     event.preventDefault();
+    console.log(currentRight, maxRight);
     if (currentRight < maxRight) {
         currentRight += step;
         list.style.right = currentRight + "px";
@@ -79,44 +83,6 @@ left.addEventListener('click', function () {
         list.style.right = currentRight + "px";
     }
 });
-
-
-//
-
-// (function () {
-//     let slider = document.querySelector('.slider');
-//     let sliderList = document.querySelector('.slider__list');
-//     let arrows = document.querySelector('.slider__arrow');
-//     let activeItem = null;
-//     let step = 100;
-//     let itemPos = 0;
-//
-//     arrows.addEventListener('click', (event)=>{
-//         event.preventDefault();
-//         activeItem = slider.querySelector('.active');
-//         console.log(activeItem);
-//         if (event.target.classList.contains('.slider__arrow--next')){
-//             if (activeItem.nextElementSibling) {
-//                 slideTo('next');
-//             }
-//         } else {
-//             if (activeItem.previousElementSibling) {
-//                 slideTo('prev');
-//             }
-//         }
-//     });
-//     function slideTo(vector) {
-//         if(vector === "next"){
-//             itemPos += step;
-//             activeItem.nextElementSibling.classList.add('active');
-//         } else {
-//             itemPos -= step;
-//             activeItem.previousElementSibling.classList.add('active');
-//         }
-//         sliderList.style.trnsform = 'translateX(${-itemPos}%)';
-//         activeItem.classList.remove('active');
-//     }
-// })();
 
 // АККОРДЕОН Вертикальный
 (function () {
