@@ -95,13 +95,14 @@ input:focus, a:focus, button:focus {
 
 .wrapper {
   position: relative;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   overflow: hidden; }
 
 .container {
   margin: 0 auto;
   max-width: 67.14286rem;
-  width: 100%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,10 +122,15 @@ input:focus, a:focus, button:focus {
 
 .maincontent {
   height: 100%;
-  min-height: 46.42857rem; }
+  min-height: 650px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  will-change: transform;
+  position: relative; }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 46.42857rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,6 +142,9 @@ input:focus, a:focus, button:focus {
   background-position: center center;
   background-size: cover;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: initial; } }
   @media screen and (max-width: 480px) {
     .section {
       min-width: 22.85714rem; } }
@@ -1251,7 +1260,8 @@ input:focus, a:focus, button:focus {
 
 /*ОТЗЫВЫ*/
 .reviews {
-  background-color: #cfd8dc; }
+  background-color: #cfd8dc;
+  position: relative; }
   .reviews__list {
     min-height: 100%;
     list-style: none;
@@ -1285,9 +1295,9 @@ input:focus, a:focus, button:focus {
     filter: grayscale(100%); }
   .review__hover {
     opacity: 0;
-    -webkit-transition: all .6s ease-in-out;
-    -o-transition: all .6s ease-in-out;
-    transition: all .6s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     background: rgba(28, 28, 28, 0.77);
     width: 100%;
     height: 100%;
@@ -1387,18 +1397,19 @@ input:focus, a:focus, button:focus {
   height: 18.21429rem;
   border-radius: 0.21429rem;
   background: #fff;
-  position: fixed;
+  position: absolute;
   top: 45%;
   left: 50%;
   margin-top: -10.71429rem;
   margin-left: -16.78571rem;
   display: none;
   opacity: 0;
-  z-index: 10;
+  z-index: 3;
   padding: 1.42857rem 1.07143rem;
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.71429rem; }
+  line-height: 1.71429rem;
+  will-change: auto; }
   @media screen and (max-width: 768px) {
     .modal_form {
       margin-left: -30%;
@@ -1420,15 +1431,15 @@ input:focus, a:focus, button:focus {
   margin: 1.42857rem; }
 
 #overlay {
-  z-index: 9;
-  position: fixed;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
   background-color: #2f3234;
   opacity: 0.9;
   filter: alpha(opacity=80);
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   cursor: pointer;
   display: none; }
 

@@ -1,6 +1,7 @@
 /*ОТЗЫВЫ*/
 .reviews {
   background-color: #cfd8dc;
+  position: relative;
 
   &__list {
     min-height: 100%;
@@ -40,7 +41,7 @@
 
   &__hover {
     opacity: 0;
-    transition: all .6s ease-in-out;
+    transition: all .5s ease-in-out;
     background: rgba(28, 28, 28, 0.77);
     width: 100%;
     height: 100%;
@@ -133,18 +134,19 @@
   height: rem(255px);
   border-radius: rem(3px);
   background: #fff;
-  position: fixed;
+  position: absolute;
   top: 45%;
   left: 50%;
   margin-top: rem(-150px);
   margin-left: rem(-235px);
   display: none;
   opacity: 0;
-  z-index: 10;
+  z-index: 3;
   padding: rem(20px) rem(15px);
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-size: rem(14px);
   line-height: rem(24px);
+  will-change: auto;
   @include tablet {
     margin-left: -30%;
     width: 60%;
@@ -172,15 +174,17 @@
 // Пoдлoжкa
 
 #overlay {
-  z-index: 9;
-  position: fixed;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
   background-color: $black;
   opacity: 0.9;
   filter: alpha(opacity=80);
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  //top: 0;
+  //left: 0;
   cursor: pointer;
   display: none;
 }

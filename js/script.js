@@ -51,38 +51,88 @@ let jsonReviews = {
     ]
 };
 
-// SLIDER
-let left = document.querySelector(".slider__arrow--prev");
-let right = document.querySelector(".slider__arrow--next");
-let list = document.querySelector(".slider__list");
 
-let minRight = 0;
-let maxRight = 0;
-let lis = $("li.slider__item");
-let step = lis.width(); //940;
-let currentRight = 0;
+//ONE PAGE SCROLL
 
-lis.each(function () {
-    maxRight += step;
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+let performTransition = sectionEq => {
+    let position = `${sectionEq * -100}%`;
+
+    if (inScroll) return; //условие выхода из функции, код ниже return не выполняется
+    inScroll = true;
+
+    sections.eq(sectionEq).addClass('active')
+        .siblings().removeClass('active');
+
+    display.css({
+        'transform': `translate(0, ${position})`,
+        '-webkit-transform': `translate(0, ${position})`
+    })
+
+    setTimeout(() => {
+        inScroll = false;
+    }, 1300); //продолжительность анимации +300ms, потому что закончится инерция
+};
+
+
+const scrollToSection = direction => {
+    let activeSection = sections.filter('.active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === 'up' && prevSection.length) { //проверка на существование секции через lenght
+        performTransition(prevSection.index())
+    }
+
+    if (direction === 'down' && nextSection.length) {
+        performTransition(nextSection.index())
+    }
+}
+
+$(document).on({ //когда навешиваем несколько событий, код записываем в {} - как объект
+    wheel: e => { //'function(e){}' === 'e =>{}'
+        //стрелочная функция (ES6) передает в this родительский контекст
+        const deltaY = e.originalEvent.deltaY;
+        const direction = deltaY > 0
+            ? 'down' //если больше 0, то down
+            : 'up' //иначе (если меньше 0), то up
+
+        scrollToSection(direction);
+    },
+    keydown: e => {
+        switch (e.keyCode) {
+            // console.log(e.keyCode); //способ отследить код кнопки
+            //кнопка вниз - 40
+            case 40:
+                scrollToSection('down');
+                break;
+            //кнопка вверх - 38
+            case 38:
+                scrollToSection('up');
+                break;
+        }
+    },
+    touchmove: e => e.preventDefault()
+
+    //touchstart touchend touchmove
 });
-maxRight -= step;
 
-right.addEventListener('click', function () {
-    event.preventDefault();
-    console.log(currentRight, maxRight);
-    if (currentRight < maxRight) {
-        currentRight += step;
-        list.style.right = currentRight + "px";
+$(document).swipe({
+    //Generic swipe handler for all directions
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        // $(this).text("You swiped " + direction );
+        // alert(direction)
+        /**
+         * плагин возвращает фактическое движение пальца,
+         * а функция от нас ждёт направление движения страницы
+         */
+        const scrollDirection = direction === 'down' ? 'up' : 'down'; //если в direction вернется down, то записываем up и наоборот
+        scrollToSection(scrollDirection);
     }
 });
 
-left.addEventListener('click', function () {
-    event.preventDefault();
-    if (currentRight > minRight) {
-        currentRight -= step;
-        list.style.right = currentRight + "px";
-    }
-});
 
 // АККОРДЕОН Вертикальный
 (function () {
@@ -144,34 +194,63 @@ $(document).ready(function () {
 // ПОЛНОЭКРАННОЕ МЕНЮ
     const fullPageNav = document.querySelector('#navTab');
     const maxTop = 0;
-    const step = 100;
+    const stepNav = 100;
 
     let currentTop = -100;
 
 
     $('#openMenu').on('click', function () {
         if (currentTop < maxTop) {
-            currentTop += step;
+            currentTop += stepNav;
             fullPageNav.style.top = currentTop + '%';
         }
     });
 
     $('#hide').on('click', function () {
         if (currentTop >= maxTop) {
-            currentTop -= step;
+            currentTop -= stepNav;
             fullPageNav.style.top = currentTop + '%';
         }
     });
 
+// SLIDER
+    let left = document.querySelector(".slider__arrow--prev");
+    let right = document.querySelector(".slider__arrow--next");
+    let list = document.querySelector(".slider__list");
+
+    let minRight = 0;
+    let maxRight = 0;
+    let lis = $("li.slider__item");
+    let stepSlide = lis.width(); //940;
+    let currentRight = 0;
+
+    lis.each(function () {
+        maxRight += stepSlide;
+    });
+    maxRight -= stepSlide;
+
+    right.addEventListener('click', function () {
+        event.preventDefault();
+        // console.log(currentRight, maxRight);
+        if (currentRight < maxRight) {
+            currentRight += stepSlide;
+            list.style.right = currentRight + "px";
+        }
+    });
+
+    left.addEventListener('click', function () {
+        event.preventDefault();
+        if (currentRight > minRight) {
+            currentRight -= stepSlide;
+            list.style.right = currentRight + "px";
+        }
+    });
 
 // ОТЗЫВЫ
     $(jsonReviews.reviews).each(function (index, value) {
         render(value);
     });
 
-    /**
-     * @param element
-     */
     function create(element = {}) {
         if (element instanceof Object
             && element.hasOwnProperty('name')

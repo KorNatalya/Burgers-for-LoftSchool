@@ -1,13 +1,15 @@
 .wrapper {
   position: relative;
-  min-height: 100%;
+  width: 100%;
+  //min-height: 100%; //влияет на Reviews
+  height: 100%;
   overflow: hidden;
 }
 
 .container {
   margin: 0 auto;
   max-width: rem(940px);
-  width: 100%;
+  width: 95%;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -25,11 +27,14 @@
 
 .maincontent {
   height: 100%;
-  min-height: rem(650px);
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform;
+  position: relative;
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: rem(650px);
   display: flex;
   justify-content: center;
@@ -37,6 +42,10 @@
   background-position: center center;
   background-size: cover;
   position: relative;
+
+  @include tablet{
+    min-height: initial;
+  }
 
   @include phone {
     min-width: rem(320px);
