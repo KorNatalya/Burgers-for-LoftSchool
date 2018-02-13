@@ -96,8 +96,7 @@ input:focus, a:focus, button:focus {
 .wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 .container {
   margin: 0 auto;
