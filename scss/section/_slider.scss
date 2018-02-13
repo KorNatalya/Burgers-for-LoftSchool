@@ -46,7 +46,7 @@
 
 .slider__arrow {
   position: absolute;
-  top: 50%;
+  top: 48%;
   width: rem(1000px);
 
   @include tablet {
@@ -64,6 +64,7 @@
     cursor: pointer;
     width: rem(27px);
     height: rem(15px);
+    display: block;
   }
   &--prev {
     left: 0;

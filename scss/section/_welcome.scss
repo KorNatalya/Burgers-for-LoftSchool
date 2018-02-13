@@ -123,6 +123,7 @@ display: flex;
     line-height: rem(30px);
     text-transform: uppercase;
     margin: 0 rem(12px);
+    display: inline-block;
     @include tablet{
       font-size: rem(24px);
       font-weight: 400;

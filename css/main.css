@@ -96,7 +96,8 @@ input:focus, a:focus, button:focus {
 .wrapper {
   position: relative;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 .container {
   margin: 0 auto;
@@ -379,7 +380,8 @@ input:focus, a:focus, button:focus {
     font-weight: 500;
     line-height: 2.14286rem;
     text-transform: uppercase;
-    margin: 0 0.85714rem; }
+    margin: 0 0.85714rem;
+    display: inline-block; }
     @media screen and (max-width: 768px) {
       .nav__link {
         font-size: 1.71429rem;
@@ -693,7 +695,7 @@ input:focus, a:focus, button:focus {
 
 .slider__arrow {
   position: absolute;
-  top: 50%;
+  top: 48%;
   width: 71.42857rem; }
   @media screen and (max-width: 768px) {
     .slider__arrow {
@@ -708,7 +710,8 @@ input:focus, a:focus, button:focus {
     position: absolute;
     cursor: pointer;
     width: 1.92857rem;
-    height: 1.07143rem; }
+    height: 1.07143rem;
+    display: block; }
   .slider__arrow--prev {
     left: 0;
     -webkit-transform: rotate(90deg);
@@ -1960,11 +1963,54 @@ input:focus, a:focus, button:focus {
     max-height: 100%; }
 
 /*БОКОВАЯ ПАНЕЛЬ*/
-.fixed_nav {
+.sidebar {
   position: fixed;
   top: 6.42857rem;
-  right: 2.85714rem;
-  margin: 0;
-  padding: 0; }
+  right: 3.57143rem; }
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      display: none; } }
+
+.sidebar__link {
+  position: relative;
+  display: block;
+  width: 1.14286rem;
+  height: 1.14286rem; }
+  .sidebar__link:after, .sidebar__link:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: block; }
+  .sidebar__link:after {
+    width: 0.42857rem;
+    height: 0.42857rem;
+    border-radius: 0.21429rem;
+    background-color: #ffffff; }
+  .sidebar__link:before {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border: 0.07143rem solid #ffffff;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .sidebar__link:hover:before {
+    opacity: 1;
+    width: 1rem;
+    height: 1rem; }
+
+.sidebar__item.active .sidebar__link:before {
+  opacity: 1;
+  width: 1rem;
+  height: 1rem; }
+
+.sidebar__item {
+  margin-bottom: 0.35714rem; }
 
 /*# sourceMappingURL=main.css.map */
