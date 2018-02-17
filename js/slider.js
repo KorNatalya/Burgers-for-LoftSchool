@@ -10,12 +10,36 @@ $(document).ready(() => {
     let stepSlide = lis.width(); //940;
     let currentRight = 0;
 
+    let composOpen = () => {
+        $('.compos-btn').on('click', (event) => {
+            $('.compos__info').fadeIn(200);
+            console.log(event.currentTarget);
+        });
+    };
+
+    /**
+     * Закрытие окна с составом
+     */
+    let composClose = () => {
+        $('.compos__X').on('click', () => {
+            $('.compos__info').fadeOut(200);
+                // .animate({opacity: 0, top: '35%'}, 200,
+                //     () => {
+                //         $(this).css('display', 'none');
+                //     }
+                // );
+        });
+    };
+
+    // composOpen();
+    // composClose(); // создание обработчиков для кнопки compos__X
+
     lis.each(() => {
         maxRight += stepSlide;
     });
     maxRight -= stepSlide;
 
-    $(right).on('click', () => {
+    $(right).on('click', (event) => {
         event.preventDefault();
         if (currentRight < maxRight) {
             currentRight += stepSlide;
@@ -26,7 +50,7 @@ $(document).ready(() => {
         }
     });
 
-    $(left).on('click', () => {
+    $(left).on('click', (event) => {
         event.preventDefault();
         if (currentRight > minRight) {
             currentRight -= stepSlide;

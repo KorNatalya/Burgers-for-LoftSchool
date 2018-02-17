@@ -20,10 +20,10 @@
 
   p {
     min-width: rem(350px);
-    @include tablet{
+    @include tablet {
       min-width: rem(300px);
     }
-    @include phone{
+    @include phone {
       min-width: rem(280px);
     }
   }
@@ -39,7 +39,6 @@
 }
 
 .menu-acco {
-
   &__list {
     top: 0;
     right: 0;
@@ -121,15 +120,13 @@
     padding-top: rem(30px);
     padding-left: 7%;
     padding-right: 7%;
-    @include tablet{
+    @include tablet {
       width: 100%;
     }
   }
 }
 
-
 //ACTIVE
-
 .menu-acco__item--active {
   @include phone {
     position: absolute;
@@ -210,4 +207,5 @@
     }
   }
 }
+
 

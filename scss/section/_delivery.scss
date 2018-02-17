@@ -126,8 +126,6 @@
   display: flex;
 }
 
-
-
 //radio
 
 .form__block--radio {
@@ -220,6 +218,35 @@
   transform: rotate(45deg);
   transition: .2s;
 }
+
+.order-modal__form {
+  width: rem(400px);
+  height: auto;
+  border-radius: rem(3px);
+  background: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-top: rem(-150px);
+  margin-left: rem(-235px);
+  display: none;
+  z-index: 3;
+  padding: rem(20px) rem(15px);
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-size: rem(14px);
+  line-height: rem(24px);
+  will-change: auto;
+  @include tablet {
+    margin-left: -30%;
+    width: 60%;
+  }
+
+  @include phone {
+    margin-left: -45%;
+    width: 90%;
+  }
+}
+
 
 
 

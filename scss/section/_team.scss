@@ -87,7 +87,8 @@
     }
     @include phone {
       min-width: 75%;
-      height: rem(195px);
+      //height: rem(195px);
+      height: auto;
     }
   }
 
@@ -96,6 +97,7 @@
     height: rem(100px);
     border-radius: 50%;
     overflow: hidden;
+    flex: none;
   }
 
   &__photo-img {

@@ -184,8 +184,10 @@
 }
 
 .compos-btn:hover .compos__info {
-  display: flex;
-  transition: all 0.3s ease-in;
+  @include desktop{
+    display: flex;
+    transition: all 0.3s ease-in;
+  }
 }
 
 .compos {
@@ -257,6 +259,7 @@
     height: rem(290px);
     @include phone {
       max-width: rem(230px);
+      padding: 5%;
     }
   }
 

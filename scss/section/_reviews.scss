@@ -129,7 +129,7 @@
 }
 
 // Модальное окно
-.modal_form {
+.modal-form {
   width: rem(470px);
   height: rem(255px);
   border-radius: rem(3px);
@@ -159,37 +159,7 @@
   }
 }
 
-// Кнoпкa Зaкрыть
-.modal_form .modal_close {
-  width: rem(15px);
-  height: rem(15px);
-  position: absolute;
-  top: rem(10px);
-  right: rem(10px);
-  cursor: pointer;
-  display: block;
-  margin: rem(20px);
-}
-
-// Пoдлoжкa
-
-#overlay {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: $black;
-  opacity: 0.9;
-  filter: alpha(opacity=80);
-  width: 100%;
-  height: 100%;
-  //top: 0;
-  //left: 0;
-  cursor: pointer;
-  display: none;
-}
-
-.modal_form_name {
+.modal-form__name {
   font-family: 'Gagalin', Helvetica, sans-serif;
   margin-bottom: rem(25px);
 }

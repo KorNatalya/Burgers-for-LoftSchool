@@ -8,13 +8,13 @@ $(document).ready(() => {
     let modalOpen = () => {
         $('button.button__more').on('click', (event) => {
             event.preventDefault();
-            $('#overlay')
+            $('#reviews_overlay.overlay')
                 .fadeIn(300,
                 function () {
                     let index = $(event.target).attr('data-long-text');
-                    $('.modal_form_name').text(reviews[index].name);
-                    $('.long_text').text(reviews[index].long_text);
-                    $('.modal_form')
+                    $('.modal-form__name').text(reviews[index].name);
+                    $('.modal-form__longText').text(reviews[index].long_text);
+                    $('.modal-form')
                         .css('display', 'block')
                         .animate({opacity: 1, top: '50%', left: '50%'}, 200);
                 });
@@ -25,12 +25,13 @@ $(document).ready(() => {
      * Закрытие модального окна
      */
     let modalClose = () => {
-        $('.modal_close, #overlay').click(function () {
-            $('.modal_form')
+        $('.modal-close, #reviews_overlay.overlay').click(function () {
+
+            $('.modal-form')
                 .animate({opacity: 0, top: '35%'}, 200,
                     function () {
                         $(this).css('display', 'none');
-                        $('#overlay').fadeOut(300);
+                        $('#reviews_overlay.overlay').fadeOut(300);
                     }
                 );
         });
@@ -88,12 +89,12 @@ $(document).ready(() => {
     let renderEl = (index, dataJson) => {
         let modal_form_name = create({
             name: 'p',
-            className: 'modal_form_name',
+            className: 'modal-form__name',
             text: dataJson.name
         });
         let long_text = create({
             name: 'p',
-            className: 'long_text',
+            className: 'modal-form__longText',
             text: dataJson.long_text
         });
         let reviews__item = create({

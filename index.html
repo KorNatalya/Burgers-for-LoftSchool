@@ -12,7 +12,7 @@
    <link rel="icon" href="./icons/burger.png" sizes="any">
 </head>
 <body>
-<!--[if lt IE 7]>
+<!--[if lt IE 9]>
 <p class="chromeframe">
    Похоже, что Вы используете устаревший браузер. Скачайте бесплатно современный браузер по ссылке -
    <a href="https://www.google.ru/chrome/">Chrome</a>
@@ -355,7 +355,7 @@
                               тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
                               салатом с добавлением экзотического соуса чураско.
                            </p>
-                           <div class="slider-descrip__price"><span>500</span> рублей</div>
+                           <div class="slider-descrip__price"><span>600</span> рублей</div>
                            <button class="button button_action_order" value="Order">Заказать</button>
                         </div>
                      </div>
@@ -456,7 +456,7 @@
                               тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
                               салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                            </p>
-                           <div class="slider-descrip__price"><span>500</span> рублей</div>
+                           <div class="slider-descrip__price"><span>450</span> рублей</div>
                            <button class="button button_action_order" value="Order">Заказать</button>
                         </div>
                      </div>
@@ -557,7 +557,7 @@
                               тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
                               салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                            </p>
-                           <div class="slider-descrip__price"><span>500</span> рублей</div>
+                           <div class="slider-descrip__price"><span>540</span> рублей</div>
                            <button class="button button_action_order" value="Order">Заказать</button>
                         </div>
                      </div>
@@ -647,7 +647,7 @@
                               <svg class="kkal--icon">
                                  <use xlink:href="icons/sprite.svg#kkal"></use>
                               </svg>
-                              <div class="kkal--info">1400<br/><span>ккал</span></div>
+                              <div class="kkal--info">1250<br/><span>ккал</span></div>
                            </div>
                         </div>
                         <div class="slider-descrip">
@@ -658,7 +658,7 @@
                               тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
                               салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                            </p>
-                           <div class="slider-descrip__price"><span>500</span> рублей</div>
+                           <div class="slider-descrip__price"><span>580</span> рублей</div>
                            <button class="button button_action_order" value="Order">Заказать</button>
                         </div>
                      </div>
@@ -767,7 +767,6 @@
 
          <ul class="menu-acco__list">
             <li class="menu-acco__item ">
-               <!--menu-acco__item--active-->
                <a class="menu-acco__trigger menu-acco__trigger-meat">
                   <span class="menu-acco__title">Для мясоедов</span>
                </a>
@@ -845,14 +844,14 @@
       <!--ОТЗЫВЫ-->
       <section class="section reviews">
          <ul class="reviews__list"></ul>
-         <div class="modal_form">
-            <div class="modal_close">
+         <div class="modal-form">
+            <div class="modal-close">
                <img src="./icons/x_orange.png">
             </div>
-            <p class="modal_form_name"></p>
-            <p class="long_text"></p>
+            <p class="modal-form__name"></p>
+            <p class="modal-form__longText"></p>
          </div>
-         <div id="overlay"></div><!-- Пoдлoжкa -->
+         <div class="overlay" id="reviews_overlay"></div><!-- Пoдлoжкa -->
       </section>
       <!--ДОСТАВКА-->
       <section class="section delivery">
@@ -860,67 +859,68 @@
             <h1 class="section__title section__title--orange section__title--center">Закажите доставку</h1>
 
             <div class="delivery__form">
-               <form action="" class="form">
+               <form action="server.php" method="post" id="order-form" class="form">
                   <div class="form__left">
                      <div class="form__row">
-                        <label class="form__block">
+                        <label for="user-name" class="form__block">
                            <div class="form__title">Имя</div>
-                           <input type="text" name="name" class="form__input">
+                           <input id="user-name" name="user-name" type="text" class="form__input" required>
                         </label>
-                        <label class="form__block">
+                        <label for="phone-number" class="form__block">
                            <div class="form__title">Телефон</div>
-                           <input type="text" name="phone" class="form__input">
+                           <input id="phone-number" type="text" name="phone-number" class="form__input" required>
                         </label>
                      </div>
                      <div class="form__row">
-                        <label class="form__block">
+                        <label for="street" class="form__block">
                            <div class="form__title">Улица</div>
-                           <input type="text" name="street" class="form__input">
+                           <input id="street" type="text" name="street" class="form__input" required>
                         </label>
                      </div>
                      <div class="form__row">
-                        <label class="form__block">
+                        <label for="building" class="form__block">
                            <div class="form__title">Дом</div>
-                           <input type="text" name="building" class="form__input">
+                           <input id="building" type="text" name="building" class="form__input" required>
                         </label>
-                        <label class="form__block">
+                        <label for="block" class="form__block">
                            <div class="form__title">Корпус</div>
-                           <input type="text" name="block" class="form__input">
+                           <input id="block" type="text" name="block" class="form__input">
                         </label>
-                        <label class="form__block">
+                        <label for="apartment" class="form__block">
                            <div class="form__title">Квартира</div>
-                           <input type="text" name="flat" class="form__input">
+                           <input id="apartment" type="text" name="apartment" class="form__input">
                         </label>
-                        <label class="form__block">
+                        <label for="floor" class="form__block">
                            <div class="form__title">Этаж</div>
-                           <input type="text" name="floor" class="form__input">
+                           <input id="floor" type="text" name="floor" class="form__input">
                         </label>
                      </div>
                   </div>
 
                   <div class="form__right">
                      <div class="form__row">
-                        <label class="form__block">
+                        <label for="comment" class="form__block">
                            <div class="form__title">Комментарий</div>
-                           <textarea type="text" name="comment" class="form__textarea" rows="80"
+                           <textarea id="comment" type="text" name="comment" class="form__textarea" rows="80"
                                      cols="45"></textarea>
                         </label>
                      </div>
                      <div class="form__row">
-                        <label class="form__block--radio">
-                           <input type="radio" name="payment" value="cash" class="form__radio"/>
+                        <label for="pay-cash" class="form__block--radio">
+                           <input id="pay-cash" type="radio" name="pay-option" value="cash" class="form__radio"/>
                            <span class="radio"></span>
                            <div class="form__text--radio">Потребуется сдача</div>
                         </label>
-                        <label class="form__block--radio">
-                           <input type="radio" name="payment" value="card" class="form__radio" checked/>
+                        <label for="pay-card" class="form__block--radio">
+                           <input id="pay-card" type="radio" name="pay-option" value="card" class="form__radio"
+                                  checked/>
                            <span class="radio"></span>
                            <div class="form__text--radio">Оплата по карте</div>
                         </label>
                      </div>
                      <div class="form__row">
-                        <label class="form__block--checkbox">
-                           <input type="checkbox" name="call" value="donotcall" class="form__checkbox"
+                        <label for="dontcall" class="form__block--checkbox">
+                           <input id="dontcall" type="checkbox" name="dontcall" value="1" class="form__checkbox"
                                   checked>
                            <span class="checkmark"></span>
                            <div class="form__text--checkbox">Не перезванивать</div>
@@ -928,21 +928,30 @@
                      </div>
 
                      <div class="form__row">
-                        <label class="form__buttons">
-                           <button class="button button_action_order" value="Order">Заказать</button>
+                        <label for="make-order" class="form__buttons">
+                           <button type="submit" id="make-order" class="button button_action_order" value="1">Заказать
+                           </button>
                         </label>
-                        <label class="form__buttons">
-                           <input type="reset" value="Очистить" class="form__reset">
+                        <label for="clear" class="form__buttons">
+                           <input id="clear" type="reset" value="Очистить" class="form__reset">
                         </label>
                      </div>
                   </div>
                </form>
             </div>
          </div>
+         <div class="order-modal__form">
+            <div class="modal-close" id="delivery_close">
+               <img src="./icons/x_orange.png">
+            </div>
+            <p class="order-modal__text"></p>
+         </div>
+         <div class="overlay" id="delivery_overlay"></div><!-- Пoдлoжкa -->
       </section>
       <!--КОНТАКТЫ-->
       <section class="section contacts">
          <div class="contacts__map">
+            <div id="map" class="map"></div>
          </div>
          <footer class="contacts__footer">
             <div class="footer-content">
@@ -1018,8 +1027,10 @@
 
 
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
-<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
-<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script type='text/javascript'
+        src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+<script type='text/javascript'
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
 <script src="./js/slider.js"></script>
 <script src="./js/ops.js"></script>
 <script src="./js/fullPageMenu.js"></script>
@@ -1028,6 +1039,12 @@
 <script src="./js/reviewsJson.js"></script>
 <script src="./js/reviews.js"></script>
 
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+</script>
+
+<script src="./js/map.js"></script>
+
+<script src="./js/common.js"></script>
 </body>
 
 </html>

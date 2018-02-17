@@ -5,8 +5,6 @@
   background-color: $color;
 }
 
-
-
 @mixin desktop {
   @media screen and (max-width: 1200px) { //desktop
     @content;

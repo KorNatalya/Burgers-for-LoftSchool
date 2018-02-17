@@ -12,7 +12,7 @@
   }
 
   .section__title {
-    margin-bottom: rem(25px);
+    margin-bottom: rem(40px);
   }
   .container {
     justify-content: center;
@@ -64,10 +64,13 @@
   }
 
   &__icon {
-    width: rem(100px);
-    height: rem(100px);
+    min-width: rem(100px);
+    height: rem(90px);
     margin-bottom: rem(30px);
     display: flex;
+    @include tablet{
+      width: rem(100px);
+    }
   }
 
   &__info {
@@ -81,11 +84,14 @@
   &__title {
     font-family: Lifehack, Helvetica, sans-serif;
     color: $black;
-    font-weight: 300;
+    font-weight: 500;
     font-size: rem(24px);
-    line-height: rem(24px);
+    line-height: rem(28px);
     letter-spacing: rem(-0.6px);
-    margin-bottom: 7%;
+    margin-bottom: rem(15px);
+    @include tablet{
+      margin-bottom: 5%;
+    }
   }
 
   &__desc {
@@ -97,5 +103,4 @@
     line-height: rem(24px);
   }
 }
-
 
