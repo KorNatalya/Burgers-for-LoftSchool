@@ -1,0 +1,65 @@
+/*БОКОВАЯ ПАНЕЛЬ*/
+
+.sidebar {
+  position: fixed;
+  top: rem(90px);
+  right: rem(50px);
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.sidebar__link {
+  position: relative;
+  display: block;
+  width: rem(16px);
+  height: rem(16px);
+
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: block;
+  }
+
+  &:after {
+    @include circle(rem(6px), #ffffff);
+  }
+
+  &:before {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border: rem(1px) solid #ffffff;
+    transition: .3s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+      width: rem(14px);
+      height: rem(14px);
+    }
+  }
+}
+
+.sidebar__item {
+  &.active {
+    .sidebar__link {
+      &:before {
+        opacity: 1;
+        width: rem(14px);
+        height: rem(14px);
+      }
+    }
+  }
+}
+
+.sidebar__item {
+  margin-bottom: rem(5px);
+}

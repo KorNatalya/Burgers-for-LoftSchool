@@ -1,0 +1,211 @@
+.menu {
+  background-image: url('../img/bg/bg-menu/bg-menu.jpg');
+  background-color: #b5babd;
+
+  @include phone {
+    background-image: url('../img/bg/bg-menu/bg-menu-phone.jpg');
+    background-position: left;
+  }
+
+  &__title {
+    position: absolute;
+    left: rem(94px);
+    top: rem(112px);
+
+    @include tablet {
+      left: 5%;
+      top: 10%;
+    }
+  }
+
+  p {
+    min-width: rem(350px);
+    @include tablet {
+      min-width: rem(300px);
+    }
+    @include phone {
+      min-width: rem(280px);
+    }
+  }
+}
+
+.menu-acco__x {
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.menu-acco {
+  &__list {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__trigger {
+
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: rem(80px);
+
+    &-meat {
+      background-image: url("../img/content/bg-meat.jpg");
+    }
+    &-veg {
+      background-image: url("../img/content/bg-veg.jpg");
+    }
+    &-diet {
+      background-image: url("../img/content/bg-diet.jpg");
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+
+    font-family: Gagalin, Helvetica, sans-serif;
+    font-size: rem(40px);
+    font-weight: 400;
+    line-height: rem(80px);
+    transform-origin: left top 0;
+    transform: rotate(-90deg);
+    transition: all .1s ease;
+    top: 90%;
+    position: absolute;
+    width: rem(360px);
+
+    @include tablet {
+      top: 90%;
+    }
+
+    @include phone {
+      z-index: 10;
+    }
+  }
+
+  &__content {
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    background-color: rgba(47, 50, 52, 0.91);
+    transition: .2s ease-in-out;
+    justify-content: flex-end;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    width: rem(540px);
+    font-weight: 300;
+    line-height: rem(24px);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: rem(30px);
+    padding-left: 7%;
+    padding-right: 7%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+
+//ACTIVE
+.menu-acco__item--active {
+  @include phone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .menu-acco {
+    @include phone {
+      display: flex;
+      width: 100%;
+    }
+
+    &__trigger {
+      width: rem(80px);
+      @include tablet {
+        min-width: rem(80px);
+      }
+
+      @include phone {
+        z-index: 20;
+        display: flex;
+        min-width: rem(80px);
+        width: 15%;
+      }
+    }
+
+    &__title {
+
+      color: $orange;
+      @include phone {
+        z-index: 20;
+        position: absolute;
+        top: 90%;
+        transform-origin: left top 0;
+      }
+    }
+
+    &__content {
+      display: flex;
+      width: rem(540px);
+
+      @include tablet {
+        width: 100%;
+      }
+      @include phone {
+        width: 85%;
+        z-index: 20;
+      }
+    }
+
+    &__x {
+      @include phone {
+        display: flex;
+        z-index: 20;
+        //margin-top: rem(-40px);
+        margin-bottom: rem(12px);
+        justify-content: flex-end;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__pic {
+      display: inline-block;
+      width: rem(20px);
+      height: rem(20px);
+
+    }
+    &__img {
+      min-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+

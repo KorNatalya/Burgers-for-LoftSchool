@@ -1,0 +1,431 @@
+.slider {
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: rem(320px);
+
+    @include tablet {
+      max-width: rem(685px);
+      height: 100%;
+      justify-content: center;
+      padding: rem(5px) 0;
+    }
+    @include phone {
+      max-width: rem(500px);
+      width: 100%;
+    }
+  }
+}
+
+.slider__content {
+  display: flex;
+  width: rem(940px);
+  overflow: hidden;
+  min-height: rem(480px);
+  position: relative;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  @include phone {
+    max-height: 100%;
+  }
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 48%;
+  width: rem(1000px);
+
+  @include tablet {
+    width: rem(500px);
+  }
+  @include phone {
+    max-width: rem(370px);
+  }
+  @media screen and (max-width: 340px) {
+    max-width: rem(350px);
+  }
+
+  &--prev, &--next {
+    position: absolute;
+    cursor: pointer;
+    width: rem(27px);
+    height: rem(15px);
+    display: block;
+  }
+  &--prev {
+    left: 0;
+    transform: rotate(90deg);
+  }
+  &--next {
+    right: 0;
+    transform: rotate(-90deg);
+  }
+  &--icon {
+    max-width: 100%;
+    max-height: 100%;
+    fill: white;
+    cursor: pointer;
+  }
+}
+
+.slider__list {
+  display: flex;
+  position: relative;
+  will-change: right;
+  transition: right 0.3s;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: rem(768px);
+  }
+  @include phone {
+    width: rem(450px)
+  }
+}
+
+.slider__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: rem(940px);
+  height: 100%;
+  min-height: rem(650px);
+
+  @include tablet {
+    min-width: rem(768px);
+    //width: 100%;
+  }
+  @include phone {
+    min-width: rem(450px);
+  }
+}
+
+.slider__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: rem(940px);
+  min-height: rem(480px);
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    width: rem(500px);
+  }
+  @include phone {
+    max-width: rem(400px);
+  }
+  @media screen and (max-width: 340px) {
+    max-width: rem(320px);
+  }
+}
+
+//ЛЕВАЯ ЧАСТЬ
+.slider-burger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+
+  @include tablet {
+    height: 50%;
+    max-width: 100%;
+  }
+  @include phone {
+    width: 95%;
+    align-items: flex-end;
+  }
+}
+
+.burger-photo {
+  width: rem(455px);
+  height: rem(325px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    width: rem(405px);
+    height: rem(260px);
+    margin-top: 20%;
+  }
+  @include phone {
+    max-width: rem(280px);
+    max-height: rem(210px);
+    align-items: flex-end;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.compos-btn:hover .compos__info {
+  @include desktop{
+    display: flex;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.compos {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.compos-btn {
+  position: relative;
+  width: rem(90px);
+  height: rem(90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f08c33;
+  border-radius: rem(3px);
+  cursor: pointer;
+
+  &__icon {
+    width: rem(45px);
+    height: rem(45px);
+    fill: white;
+    margin-bottom: rem(11px);
+  }
+  &__title {
+    color: #ffffff;
+    font-family: 'Gagalin', Helvetica, sans-serif;
+    font-size: rem(14px);
+    font-weight: 400;
+  }
+}
+
+.compos__info {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  align-items: flex-start;
+  border-radius: rem(3px);
+  width: rem(270px);
+  height: rem(335px);
+  background-color: rgba(255, 255, 255, 0.91);
+  z-index: 18;
+  padding: rem(15px) rem(25px);
+  transition: .3s;
+  @include tablet {
+    width: rem(320px);
+    height: rem(335px);
+  }
+  @include phone {
+    min-width: rem(250px);
+    width: 100%;
+    padding: 4% 0 0 5%;
+  }
+}
+
+.compos {
+  &__info-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  &__table {
+    width: rem(230px);
+    height: rem(290px);
+    @include phone {
+      max-width: rem(230px);
+      padding: 5%;
+    }
+  }
+
+  &__item {
+    color: $black;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-size: rem(14px);
+    margin-bottom: rem(10px);
+
+    &--icon {
+      width: rem(45px);
+      height: rem(45px);
+
+      &--beef {
+        fill: #e25028;
+      }
+      &--buns {
+        fill: #f8b43a;
+      }
+      &--salad {
+        fill: #8ac03e;
+      }
+      &--sauce {
+        fill: #e25028;
+      }
+      &--cucumber {
+        fill: #8ac03e;
+      }
+      &--cheese {
+        fill: #f8b43a;
+      }
+    }
+    td {
+      font-weight: 500;
+    }
+    td:last-child {
+      font-weight: 300;
+    }
+  }
+}
+
+.compos__X {
+  display: none;
+
+  @include tablet {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: rem(20px);
+    height: rem(20px);
+    margin: rem(20px);
+  }
+  @include phone {
+    margin-right: 3%;
+  }
+  &--img {
+    min-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.kkal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 17;
+
+  @include tablet {
+    right: 0;
+    top: 0;
+    left: auto;
+    bottom: auto;
+  }
+
+  &--icon {
+    width: rem(60px);
+    height: rem(60px);
+    fill: #ffffff;
+    opacity: 0.5;
+  }
+  &--info {
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: 'Gagalin', Helvetica, sans-serif;
+    font-size: rem(20px);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: rem(-40px);
+    margin-left: rem(3px);
+    text-align: center;
+    span {
+      font-size: rem(14px);
+    }
+  }
+}
+
+//ПРАВАЯ ЧАСТЬ
+.slider-descrip {
+  width: 50%;
+  margin-left: rem(20px);
+
+  @include tablet {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-top: rem(40px);
+  }
+  @include phone {
+    margin-top: 3%;
+    width: 95%;
+  }
+
+  p {
+    margin-top: rem(55px);
+    margin-bottom: rem(35px);
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-size: rem(14px);
+    color: white;
+    font-weight: 300;
+    line-height: rem(24px);
+    max-width: rem(440px);
+
+    @include tablet {
+      margin: rem(36px) auto rem(26px) auto;
+      max-width: rem(440px);
+    }
+    @include phone {
+      margin-top: 5%;
+      margin-bottom: 3%;
+      font-size: rem(13px);
+    }
+  }
+  &__price {
+    font-family: 'Gagalin', Helvetica, sans-serif;
+    font-size: rem(30px);
+    font-weight: 400;
+    color: $salmon-red;
+    letter-spacing: rem(-0.75px);
+    display: inline-block;
+    margin-right: rem(30px);
+    max-width: rem(445px);
+    @include tablet {
+      margin-right: rem(10px);
+    }
+    span {
+      font-size: rem(72px);
+      letter-spacing: rem(-1.79px);
+
+      @include tablet {
+        font-size: rem(50px);
+      }
+    }
+  }
+}
+
+.section__title--closely {
+  font-weight: 400;
+  line-height: rem(64px);
+  @include tablet {
+    text-align: center;
+    margin-top: 0;
+  }
+  @include phone {
+    font-size: rem(50px);
+    line-height: rem(50px);
+  }
+}
+

@@ -1,0 +1,106 @@
+/* МЫ ЛУЧШИЕ */
+
+.best {
+  background-image: url("../img/bg/bg-we.png");
+
+  @include tablet {
+    background-image: url("../img/bg/bg-best/bg-best-tablet.png");
+  }
+
+  @include phone {
+    background-image: url("../img/bg/bg-best/bg-best.png");
+  }
+
+  .section__title {
+    margin-bottom: rem(40px);
+  }
+  .container {
+    justify-content: center;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: rem(-20px);
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+    @include phone {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+    }
+  }
+  &__item {
+    margin-left: rem(20px);
+    margin-bottom: rem(20px);
+    width: 60%;
+    @include tablet {
+      width: 30%;
+    }
+    @include phone {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include phone {
+    flex-direction: row;
+  }
+
+  &__icon {
+    min-width: rem(100px);
+    height: rem(90px);
+    margin-bottom: rem(30px);
+    display: flex;
+    @include tablet{
+      width: rem(100px);
+    }
+  }
+
+  &__info {
+    text-align: center;
+
+    @include phone {
+      text-align: left;
+      margin-left: rem(28px);
+    }
+  }
+  &__title {
+    font-family: Lifehack, Helvetica, sans-serif;
+    color: $black;
+    font-weight: 500;
+    font-size: rem(24px);
+    line-height: rem(28px);
+    letter-spacing: rem(-0.6px);
+    margin-bottom: rem(15px);
+    @include tablet{
+      margin-bottom: 5%;
+    }
+  }
+
+  &__desc {
+    opacity: 0.8;
+    color: $black;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+  }
+}
+

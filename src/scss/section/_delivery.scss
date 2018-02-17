@@ -1,0 +1,261 @@
+.delivery {
+  background-image: url('../img/bg/bg-texture-delivery.png'), url('../img/bg/bg-delivery.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    @include tablet {
+      margin-bottom: 5%;
+    }
+  }
+
+  &__form {
+    color: #ffffff;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: rem(14px);
+    margin-top: rem(50px);
+    @include tablet {
+      margin: 0;
+    }
+    @include phone {
+      margin: 0;
+    }
+  }
+}
+
+.form {
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__left {
+    width: 50%;
+
+    @include tablet {
+      width: 70%;
+      margin: 0;
+    }
+
+    @include phone {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 50%;
+    margin-left: rem(20px);
+
+    @include tablet {
+      width: 70%;
+      margin: 0;
+    }
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &__row {
+    margin-bottom: rem(20px);
+    display: flex;
+  }
+
+  &__block {
+    display: block;
+    flex: 1;
+    margin-right: rem(19px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+    span {
+      margin-right: rem(20px);
+      @include phone {
+        margin-right: rem(10px);
+      }
+    }
+  }
+  &__reset {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__input {
+    margin-top: rem(10px);
+    padding: rem(10px) rem(20px);
+    background-color: white;
+    border: rem(1px) solid #d1cfcb;
+    border-radius: rem(3px);
+    width: 100%;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+    color: $black;
+    height: rem(35px);
+  }
+
+  &__textarea {
+    max-height: rem(115px);
+    margin-top: rem(10px);
+    padding: rem(10px) rem(20px);
+    background-color: white;
+    border: 1px solid #d1cfcb;
+    border-radius: rem(3px);
+    width: 100%;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+    color: $black;
+  }
+
+  &__radio, &__checkbox {
+    cursor: pointer;
+    margin-right: rem(10px);
+    border: none;
+  }
+}
+
+.form__buttons {
+  margin-right: rem(20px);
+  display: flex;
+}
+
+//radio
+
+.form__block--radio {
+  display: block;
+  position: relative;
+  padding-left: rem(35px);
+  margin-bottom: rem(12px);
+  margin-right: rem(20px);
+  cursor: pointer;
+  font-size: rem(14px);
+  user-select: none;
+  margin-left: rem(-10px);
+}
+
+.form__block--radio input {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+.radio {
+  position: absolute;
+  top: 0;
+  left: rem(10px);
+  @include circle(rem(15px), #ffffff);
+}
+
+.radio:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.form__block--radio input:checked ~ .radio:after {
+  opacity: 1;
+}
+
+.form__block--radio .radio:after {
+  top: rem(4px);
+  left: rem(4px);
+  @include circle(rem(7px), $salmon-red);
+  transition: .2s;
+}
+
+//checkbox
+
+.form__block--checkbox {
+  display: block;
+  position: relative;
+  padding-left: rem(35px);
+  margin-bottom: rem(12px);
+  cursor: pointer;
+  font-size: rem(14px);
+  user-select: none;
+  margin-left: rem(-10px);
+}
+
+.form__block--checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: rem(10px);
+  height: rem(15px);
+  width: rem(15px);
+  background-color: #ffffff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.form__block--checkbox input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+
+.form__block--checkbox .checkmark:after {
+  left: rem(5px);
+  top: rem(1px);
+  width: rem(3px);
+  height: rem(8px);
+  border: solid $salmon-red;
+  border-width: 0 rem(2px) rem(2px) 0;
+  transform: rotate(45deg);
+  transition: .2s;
+}
+
+.order-modal__form {
+  width: rem(400px);
+  height: auto;
+  border-radius: rem(3px);
+  background: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-top: rem(-150px);
+  margin-left: rem(-235px);
+  display: none;
+  z-index: 3;
+  padding: rem(20px) rem(15px);
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-size: rem(14px);
+  line-height: rem(24px);
+  will-change: auto;
+  @include tablet {
+    margin-left: -30%;
+    width: 60%;
+  }
+
+  @include phone {
+    margin-left: -45%;
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

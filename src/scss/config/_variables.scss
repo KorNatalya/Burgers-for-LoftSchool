@@ -1,0 +1,14 @@
+//colors
+
+$orange: #f9b43b;
+$salmon-red: #e35028;
+$black: rgb(47, 50, 52);
+
+//resolutions
+$tablet: 768px;
+$phone: 480px;
+
+//responsive
+@function rem($px) {
+  @return $px / 14px+0rem;
+}
