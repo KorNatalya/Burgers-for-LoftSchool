@@ -52,7 +52,7 @@ $(document).ready(() => {
      * Закрытие модального окна
      */
     let delModalClose = () => {
-        $('#delivery_close.modal-close').on('click', () => {
+        $('#delivery_close.order-modal__close').on('click', () => {
             $('.order-modal__form')
                 .fadeOut(200, () => {
                         $('#delivery_overlay.overlay').fadeOut(300);

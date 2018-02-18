@@ -56,7 +56,7 @@ $mail = mail('natalie178@ya.ru', 'Заказ', $mail_message, $headers);
 
     if ($mail) {
         $data['status'] = "OK";
-        $data['mes'] = "Заказ успешно отправлен";
+        $data['mes'] = "Сообщение отправлено";
     }else{
         $data['status'] = "NO";
         $data['mes'] = "На сервере произошла ошибка";

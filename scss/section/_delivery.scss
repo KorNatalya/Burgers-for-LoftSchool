@@ -89,7 +89,7 @@
     padding: rem(10px) rem(20px);
     background-color: white;
     border: rem(1px) solid #d1cfcb;
-    border-radius: rem(3px);
+    border-radius: rem(4px);
     width: 100%;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: rem(14px);
@@ -105,7 +105,7 @@
     padding: rem(10px) rem(20px);
     background-color: white;
     border: 1px solid #d1cfcb;
-    border-radius: rem(3px);
+    border-radius: rem(4px);
     width: 100%;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: rem(14px);
@@ -220,31 +220,35 @@
 }
 
 .order-modal__form {
-  width: rem(400px);
-  height: auto;
-  border-radius: rem(3px);
+  width: rem(230px);
+  height: rem(130px);
+  border-radius: rem(4px);
   background: #fff;
   position: absolute;
   top: 45%;
   left: 50%;
-  margin-top: rem(-150px);
-  margin-left: rem(-235px);
+  margin-top: rem(-100px);
+  margin-left: rem(-65px);
   display: none;
+  text-align: center;
   z-index: 3;
-  padding: rem(20px) rem(15px);
+  padding: rem(18px) 0;
   font-family: 'Ubuntu', Helvetica, sans-serif;
-  font-size: rem(14px);
   line-height: rem(24px);
   will-change: auto;
   @include tablet {
-    margin-left: -30%;
-    width: 60%;
+    margin-left: -18%;
+    width: 36%;
   }
 
   @include phone {
-    margin-left: -45%;
-    width: 90%;
+    margin-left: -30%;
+    width: 60%;
   }
+}
+
+.order-modal__close{
+  margin-top: rem(20px);
 }
 
 
