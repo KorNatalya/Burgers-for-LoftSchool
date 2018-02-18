@@ -1901,10 +1901,10 @@ input:focus, a:focus, button:focus {
   border-radius: 0.28571rem;
   background: #fff;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
-  margin-top: -7.14286rem;
-  margin-left: -4.64286rem;
+  margin-top: -8.21429rem;
+  margin-left: -9.28571rem;
   display: none;
   text-align: center;
   z-index: 3;

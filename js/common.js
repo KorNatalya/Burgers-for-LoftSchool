@@ -61,5 +61,25 @@ $(document).ready(() => {
         });
     };
 
+    /**
+     * Функция обратного вызова
+     * @param event
+     */
+    let validator = (event) => {
+        let input = $(event.target); // Получаем input
+        let attr = input.attr('pattern'); // Берём pattern (шаблон) из input
+        let pattern = new RegExp(attr); // Получаем регулярное выражение (объект RegExp) для шаблона
+        let value = input.val(); // Получаем значение из input
+
+        if (!pattern.test(value)) { // Если значение не проходит тест на pattern
+            /* То удаляем последний введённый символ */
+            let string = value.substring(0, value.length - 1);
+            /* И вставляем строку в input */
+            input.val(string);
+        }
+    };
+
     $('#order-form').on('submit', submitForm);
+    $('#user-name').on('input', validator);
+    $('#phone-number').inputmask("+7 (999) 999-99-99");
 });

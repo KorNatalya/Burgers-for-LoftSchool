@@ -26,7 +26,7 @@
          <div class="container container--tab">
             <!--HEADER-->
             <header class="welcome__header">
-               <a href="/index.html" class="logo">
+               <a href="#" class="logo">
                   <img src="icons/logo.svg" alt="logo" class="logo__img">
                </a>
                <div class="nav-wrap">
@@ -837,35 +837,46 @@
                      <div class="form__row">
                         <label for="user-name" class="form__block">
                            <div class="form__title">Имя</div>
-                           <input id="user-name" name="user-name" type="text" class="form__input" required>
+                           <input id="user-name" name="user-name" type="text" maxlength="20" class="form__input"
+                                  pattern="^[A-Za-zА-Яа-яЁё\-\s]{0,20}$"
+                                  placeholder="Введите Ваше имя"
+                                  required />
                         </label>
                         <label for="phone-number" class="form__block">
                            <div class="form__title">Телефон</div>
-                           <input id="phone-number" type="text" name="phone-number" class="form__input" required>
+                           <input id="phone-number" type="tel"
+                                  name="phone-number" maxlength="18" class="form__input"
+                                  pattern="^[\+\d\(\)\-\s]{0,18}$"
+                                  placeholder="+7 (___) ___-__-__"
+                                  required>
                         </label>
                      </div>
                      <div class="form__row">
                         <label for="street" class="form__block">
                            <div class="form__title">Улица</div>
-                           <input id="street" type="text" name="street" class="form__input" required>
+                           <input id="street" type="text" name="street" maxlength="20" class="form__input"
+                                  placeholder="Введите улицу"
+                                  required />
                         </label>
                      </div>
                      <div class="form__row">
                         <label for="building" class="form__block">
                            <div class="form__title">Дом</div>
-                           <input id="building" type="text" name="building" class="form__input" required>
+                           <input id="building" type="text" name="building" maxlength="5" class="form__input"
+                                  placeholder="№ дома"
+                                  required />
                         </label>
                         <label for="block" class="form__block">
                            <div class="form__title">Корпус</div>
-                           <input id="block" type="text" name="block" class="form__input">
+                           <input id="block" type="text" name="block" maxlength="5" class="form__input">
                         </label>
                         <label for="apartment" class="form__block">
                            <div class="form__title">Квартира</div>
-                           <input id="apartment" type="text" name="apartment" class="form__input">
+                           <input id="apartment" type="text" name="apartment" maxlength="5" class="form__input">
                         </label>
                         <label for="floor" class="form__block">
                            <div class="form__title">Этаж</div>
-                           <input id="floor" type="text" name="floor" class="form__input">
+                           <input id="floor" type="text" name="floor" maxlength="3" class="form__input">
                         </label>
                      </div>
                   </div>
@@ -875,7 +886,7 @@
                         <label for="comment" class="form__block">
                            <div class="form__title">Комментарий</div>
                            <textarea id="comment" type="text" name="comment" class="form__textarea" rows="80"
-                                     cols="45"></textarea>
+                                     cols="45" maxlength="200"></textarea>
                         </label>
                      </div>
                      <div class="form__row">
@@ -999,22 +1010,22 @@
 </ul>
 
 
-<script src="./js/jQuery/jquery-3.3.1.min.js"></script>
-<script type='text/javascript'
-        src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
-<script type='text/javascript'
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
-<script src="./js/slider.js"></script>
-<script src="./js/ops.js"></script>
-<script src="./js/fullPageMenu.js"></script>
-<script src="./js/accordeonVert.js"></script>
-<script src="./js/accordeonHoriz.js"></script>
-<script src="./js/reviewsJson.js"></script>
-<script src="./js/reviews.js"></script>
-<script src="./js/map.js"></script>
-<script src="./js/common.js"></script>
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/ops.js"></script>
+<script src="js/fullPageMenu.js"></script>
+<script src="js/accordeonVert.js"></script>
+<script src="js/accordeonHoriz.js"></script>
+<script src="js/reviewsJson.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/map.js"></script>
+<script src="js/common.js"></script>
 
 </body>
 </html>
