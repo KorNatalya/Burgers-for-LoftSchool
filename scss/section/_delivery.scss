@@ -14,7 +14,7 @@
     color: #ffffff;
     font-family: Ubuntu, Helvetica, sans-serif;
     font-size: rem(14px);
-    margin-top: rem(50px);
+    margin-top: rem(35px);
     @include tablet {
       margin: 0;
     }
@@ -58,7 +58,7 @@
   }
 
   &__row {
-    margin-bottom: rem(20px);
+    margin-bottom: rem(18px);
     display: flex;
   }
 
@@ -85,7 +85,7 @@
   }
 
   &__input {
-    margin-top: rem(10px);
+    margin-top: rem(5px);
     padding: rem(10px) rem(20px);
     background-color: white;
     border: rem(1px) solid #d1cfcb;
@@ -97,11 +97,14 @@
     line-height: rem(24px);
     color: $black;
     height: rem(35px);
+    @include phone{
+      padding: rem(10px);
+    }
   }
 
   &__textarea {
-    max-height: rem(115px);
-    margin-top: rem(10px);
+    max-height: rem(110px);
+    margin-top: rem(5px);
     padding: rem(10px) rem(20px);
     background-color: white;
     border: 1px solid #d1cfcb;
@@ -176,7 +179,7 @@
   display: block;
   position: relative;
   padding-left: rem(35px);
-  margin-bottom: rem(12px);
+  //margin-bottom: rem(12px);
   cursor: pointer;
   font-size: rem(14px);
   user-select: none;

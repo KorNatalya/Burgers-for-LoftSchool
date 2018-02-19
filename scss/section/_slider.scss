@@ -205,7 +205,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f08c33;
-  border-radius: rem(3px);
+  border-radius: rem(4px);
   cursor: pointer;
 
   &__icon {
@@ -228,7 +228,7 @@
   top: 0;
   display: none;
   align-items: flex-start;
-  border-radius: rem(3px);
+  border-radius: rem(4px);
   width: rem(270px);
   height: rem(335px);
   background-color: rgba(255, 255, 255, 0.91);
@@ -358,22 +358,24 @@
 //ПРАВАЯ ЧАСТЬ
 .slider-descrip {
   width: 50%;
-  margin-left: rem(20px);
+  padding-left: rem(25px);
+  padding-top: rem(50px);
 
   @include tablet {
     width: 100%;
     text-align: center;
-    margin-left: 0;
-    margin-top: rem(40px);
+    padding-left: 0;
+    padding-top: rem(40px);
+
   }
   @include phone {
-    margin-top: 3%;
+    padding-top: 3%;
     width: 95%;
   }
 
   p {
-    margin-top: rem(55px);
-    margin-bottom: rem(35px);
+    margin-top: rem(40px);
+    margin-bottom: rem(20px);
     font-family: 'Ubuntu', Helvetica, sans-serif;
     font-size: rem(14px);
     color: white;
@@ -398,8 +400,8 @@
     color: $salmon-red;
     letter-spacing: rem(-0.75px);
     display: inline-block;
-    margin-right: rem(30px);
-    max-width: rem(445px);
+    margin-right: rem(25px);
+    max-width: rem(440px);
     @include tablet {
       margin-right: rem(10px);
     }
