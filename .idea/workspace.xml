@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="567bd0dc-adf6-4dbb-bd74-084f2e6b66e6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/config/_media.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/config/_media.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-best/bg-xhdpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-delivery.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-delivery.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-menu/bg-menu-phone.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-menu/bg-menu-phone.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-menu/bg-menu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-menu/bg-menu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-pic.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-pic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-team.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-team.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-texture-delivery.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-texture-delivery.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/bg-texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg/bg-texture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/texture/texture-hdpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/texture/texture-xhdpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/texture/texture-xxhdpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg/texture/texture-xxxhdpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/content/burger.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/content/burger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/content/burgers-slider/blackburger.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/content/burgers-slider/blackburger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/content/burgers-slider/shrimp.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/content/burgers-slider/shrimp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jQuery/jquery-3.3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jQuery/jquery-3.3.1.min (1).map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jQuery/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jQuery/jquery-3.3.1.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepros-6.config" beforeDir="false" afterPath="$PROJECT_DIR$/prepros-6.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/section/_welcome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/section/_welcome.scss" afterDir="false" />
-    </list>
+    <list default="true" id="567bd0dc-adf6-4dbb-bd74-084f2e6b66e6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -620,12 +595,12 @@
       <workItem from="1519224250279" duration="25000" />
       <workItem from="1519224301824" duration="1857000" />
       <workItem from="1519238136338" duration="1855000" />
-      <workItem from="1531948942169" duration="1967000" />
+      <workItem from="1531948942169" duration="2220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="772711000" />
+    <option name="totallyTimeSpent" value="772964000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,16 +613,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1170" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16287678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16287678" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49814913" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5023797" side_tool="true" weight="0.22822823" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4976203" weight="0.32732734" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3296593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4870439" weight="0.3193193" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4870439" visible="true" weight="0.3903904" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32998413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
