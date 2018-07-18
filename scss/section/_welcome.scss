@@ -43,7 +43,6 @@
       display: block;
     }
   }
-
 }
 
 /* HEADER */
@@ -197,6 +196,7 @@ display: flex;
   &__burger {
     width: 50%;
     padding-bottom: rem(50px);
+    padding-right: rem(50px);
 
     @include tablet {
       width: 60%;
@@ -249,7 +249,7 @@ display: flex;
 }
 
 .burger__img {
-  max-width: 100%;
+  min-width: 100%;
   max-height: 100%;
 }
 
